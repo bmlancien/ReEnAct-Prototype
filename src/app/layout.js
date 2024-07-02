@@ -15,8 +15,13 @@ export default function RootLayout({ children }) {
       <body
         className={inter.className}
       >
-        <Nav />
-        {children}
+        <div className="flex flex-col h-full min-h-screen">
+          <Nav />
+          {children}
+          <footer>
+            Footer
+          </footer>
+        </div>
       </body>
     </html>
   );
