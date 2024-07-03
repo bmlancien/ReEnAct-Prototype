@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import steps from '../../app/questions/steps'; // Adjust this path if necessary
+import steps from '../../app/questions/steps';
 
 export default function Breadcrumb() {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ export default function Breadcrumb() {
   }, [pathname]);
 
   return (
-    <nav className="flex items-center justify-center" aria-label="Progress">
+    <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200" aria-label="Progress">
       <p className="text-sm font-medium">
         Schritt {currentStepIndex + 1} von {steps.length}
       </p>
@@ -27,7 +27,7 @@ export default function Breadcrumb() {
           <li key={step.name}>
             {index < currentStepIndex ? (
               <Link href={step.href} legacyBehavior>
-                <a className="block h-2.5 w-2.5 rounded-full bg-indigo-600 hover:bg-indigo-900">
+                <a className="block h-2.5 w-2.5 rounded-full bg-blue-600 hover:bg-blue-900">
                   <span className="sr-only">{step.name}</span>
                 </a>
               </Link>
@@ -35,9 +35,9 @@ export default function Breadcrumb() {
               <Link href={step.href} legacyBehavior>
                 <a className="relative flex items-center justify-center" aria-current="step">
                   <span className="absolute flex h-5 w-5 p-px" aria-hidden="true">
-                    <span className="h-full w-full rounded-full bg-indigo-200" />
+                    <span className="h-full w-full rounded-full bg-blue-200" />
                   </span>
-                  <span className="relative block h-2.5 w-2.5 rounded-full bg-indigo-600" aria-hidden="true" />
+                  <span className="relative block h-2.5 w-2.5 rounded-full bg-blue-600" aria-hidden="true" />
                   <span className="sr-only">{step.name}</span>
                 </a>
               </Link>
