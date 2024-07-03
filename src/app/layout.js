@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
-import Nav from "../components/common/Nav";
+import { Source_Sans_3 } from "next/font/google";
+import Footer from "../components/layout/Footer";
+import Nav from "../components/layout/Nav";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sourceSans = Source_Sans_3({ subsets: ["latin"] });
 
 export const metadata = {
   title: "ReEnAct Prototype",
@@ -13,14 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <body
-        className={inter.className}
+        className={`${sourceSans.className} text-slate-800`}
       >
         <div className="flex flex-col h-full min-h-screen">
           <Nav />
           {children}
-          <footer>
-            Footer
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
