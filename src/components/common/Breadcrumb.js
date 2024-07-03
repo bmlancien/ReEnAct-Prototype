@@ -20,7 +20,7 @@ export default function Breadcrumb() {
   return (
     <nav className="flex items-center justify-center" aria-label="Progress">
       <p className="text-sm font-medium">
-        Step {currentStepIndex + 1} of {steps.length}
+        Schritt {currentStepIndex + 1} von {steps.length}
       </p>
       <ol role="list" className="ml-8 flex items-center space-x-5">
         {steps.map((step, index) => (
