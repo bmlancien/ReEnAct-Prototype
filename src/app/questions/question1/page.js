@@ -1,4 +1,7 @@
+import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
+import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Question1() {
   return (
@@ -11,6 +14,23 @@ export default function Question1() {
           <p className="max-w-xl pb-2">Es gibt mehrere Wege, das Hauptziel zu erreichen. Diese Wege werden durch verschiedene Zukunftsszenarien dargestellt. Mithilfe einiger Fragen können Sie das beste Zukunftsszenario und damit die optimale Lösung für die Region finden.</p>
         </div>
       </main>
+      <BottomNav>
+        <div className="flex">
+          <div className="pe-2 invisible">
+            <LightButtonMedium
+              href="#"
+              text=""
+            />
+          </div>
+          <div className="pe-2">
+            <PrimaryButtonMedium
+              href="/questions/question2"
+              icon={ArrowRightIcon}
+              text="Weiter"
+            />
+          </div>
+        </div>
+      </BottomNav>
     </>
   );
 }

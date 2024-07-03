@@ -3,11 +3,12 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Montserrat } from "next/font/google";
+import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const navigation = [
-  { name: 'Startseite', href: '#', current: true },
+  { name: 'Startseite', href: '/', current: true },
   { name: 'Projektinfos', href: '#', current: false },
   { name: 'Quellen', href: '#', current: false },
   { name: 'Hilfe', href: '#', current: false }
@@ -38,11 +39,15 @@ export default function Nav() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="/stemptool_logo.svg"
-                    alt="Your Company"
-                  />
+                  <Link
+                    href="/"
+                  >
+                    <img
+                      className="h-8 w-auto"
+                      src="/stemptool_logo.svg"
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

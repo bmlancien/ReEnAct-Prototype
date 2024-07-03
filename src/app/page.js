@@ -3,7 +3,6 @@ import HomepageCard from "../components/common/HomepageCard";
 import HomepageSecondaryCards from "../components/common/HomepageSecondaryCards";
 import { LinkIcon } from "../components/common/Links";
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,9 +23,8 @@ export default function Home() {
               >
                 <WhiteButtonMedium
                   href="/questions/question1"
-                >
-                  Los geht's
-                </WhiteButtonMedium>
+                  text="Los geht's"
+                />
               </HomepageCard>
               <HomepageCard
                 src="/images/switch.png"
@@ -34,9 +32,8 @@ export default function Home() {
               >
                 <WhiteButtonMedium
                   href="/questions/question1"
-                >
-                  Los geht's
-                </WhiteButtonMedium>
+                  text="Los geht's"
+                />
               </HomepageCard>
               <HomepageCard
                 src="/images/compare.png"
@@ -44,9 +41,8 @@ export default function Home() {
               >
                 <OutlineWhiteButtonMedium
                   href="/questions/question1"
-                >
-                  Vergleichen
-                </OutlineWhiteButtonMedium>
+                  text="Vergleichen"
+                />
               </HomepageCard>
             </div>
           </div>
