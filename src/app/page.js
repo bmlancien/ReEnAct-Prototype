@@ -1,6 +1,9 @@
 import { PrimaryButtonMedium, WhiteButtonMedium, LightButtonMedium, OutlinePrimaryButtonMedium, OutlineWhiteButtonMedium } from "../components/common/Buttons";
 import HomepageCard from "../components/common/HomepageCard";
-import Image from "next/image";
+import HomepageSecondaryCards from "../components/common/HomepageSecondaryCards";
+import { LinkIcon } from "../components/common/Links";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,6 +42,45 @@ export default function Home() {
                   Vergleichen
                 </OutlineWhiteButtonMedium>
               </HomepageCard>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-8">
+            <div className="columns-3">
+              <HomepageSecondaryCards
+                src="/images/region.png"
+                text="Die Region heute"
+              >
+                <LinkIcon
+                  href="#"
+                  text="Mehr erfahren"
+                >
+                  <ArrowRightIcon className="h-6 w-6" />
+                </LinkIcon>
+              </HomepageSecondaryCards>
+              <HomepageSecondaryCards
+                src="/images/wind.png"
+                text="Chancen der Energiewende"
+              >
+                <LinkIcon
+                  href="#"
+                  text="Mehr erfahren"
+                >
+                  <ArrowRightIcon className="h-6 w-6" />
+                </LinkIcon>
+              </HomepageSecondaryCards>
+              <HomepageSecondaryCards
+                src="/images/question.png"
+                text="FAQ und Glossar"
+              >
+                <LinkIcon
+                  href="#"
+                  text="Hilfe suchen"
+                >
+                  <ArrowRightIcon className="h-6 w-6" />
+                </LinkIcon>
+              </HomepageSecondaryCards>
             </div>
           </div>
         </div>
