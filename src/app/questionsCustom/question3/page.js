@@ -149,7 +149,7 @@ export default function Question3() {
             <PrimaryButtonMedium
               href="/questionsCustom/question4"
               icon={ArrowRightIcon}
-              text="Weiter"
+              text="Ergebnisse sehen"
             />
           </div>
         </div>

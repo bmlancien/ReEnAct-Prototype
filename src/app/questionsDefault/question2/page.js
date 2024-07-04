@@ -1,5 +1,5 @@
 import BottomNav from "../../../components/common/BottomNav";
-import Breadcrumb from "../../../components/common/Breadcrumb";
+import BreadcrumbDefault from "../../../components/common/BreadcrumbDefault";
 import EnergyShareStatic from "../../../components/charts/EnergyShareStatic";
 import Goal from "../../../components/common/Goal";
 import LayoutMap from "../../../components/layout/LayoutMap";
@@ -10,7 +10,7 @@ import { ArrowLeftIcon, ArrowRightIcon, ViewfinderCircleIcon } from '@heroicons/
 export default function Question2() {
   return (
     <>
-      <Breadcrumb />
+      <BreadcrumbDefault />
       <LayoutMap>
         <div className="flex-1 overflow-auto w-full border-r border-slate-200">
           <div className="pt-12 pe-12">
@@ -111,16 +111,16 @@ export default function Question2() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsCustom/question1"
+              href="/questionsDefault/question1"
               icon={ArrowLeftIcon}
               text="Zurück"
             />
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questionsCustom/question3"
+              href="/questionsDefault/question3"
               icon={ArrowRightIcon}
-              text="Szenario erstellen"
+              text="Fragen antworten"
             />
           </div>
         </div>

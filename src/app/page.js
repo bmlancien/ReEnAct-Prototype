@@ -22,7 +22,7 @@ export default function Home() {
                 text="Finden Sie Ihr ideales Experten-Szenario in wenigen Fragen"
               >
                 <WhiteButtonMedium
-                  href="/questionsCustom/question1"
+                  href="/questionsDefault/question1"
                   text="Los geht's"
                 />
               </HomepageCard>
