@@ -1,6 +1,7 @@
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import LayoutMap from "../../../components/layout/LayoutMap";
+import Image from "next/image";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -15,7 +16,15 @@ export default function Question2() {
           </div>
         </div>
         <div class="flex-1 overflow-auto w-full">
-          Map 
+          <div className="relative w-full h-screen overflow-hidden">
+            <Image
+              src="/images/map_image.png"
+              layout="fill"
+              objectFit="cover"
+              alt="Map"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </LayoutMap>
       <BottomNav>
