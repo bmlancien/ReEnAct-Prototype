@@ -1,5 +1,6 @@
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
+import EnergyShare from "../../../components/charts/EnergyShare";
 import LayoutMap from "../../../components/layout/LayoutMap";
 import Image from "next/image";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
@@ -13,6 +14,7 @@ export default function Question2() {
         <div class="flex-1 overflow-auto w-full border-r border-slate-200">
           <div className="p-12">
             Test
+            <EnergyShare />
           </div>
         </div>
         <div class="flex-1 overflow-auto w-full">
