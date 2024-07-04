@@ -22,7 +22,7 @@ export default function Home() {
                 text="Finden Sie Ihr ideales Experten-Szenario in wenigen Fragen"
               >
                 <WhiteButtonMedium
-                  href="/questions/question1"
+                  href="/questionsCustom/question1"
                   text="Los geht's"
                 />
               </HomepageCard>
@@ -31,7 +31,7 @@ export default function Home() {
                 text="Gestalten Sie Ihr eigenes, individuelles Szenario"
               >
                 <WhiteButtonMedium
-                  href="/questions/question1"
+                  href="/questionsCustom/question1"
                   text="Los geht's"
                 />
               </HomepageCard>
@@ -40,7 +40,7 @@ export default function Home() {
                 text="Vergleichen Sie verschiedene Experten-Szenarien"
               >
                 <OutlineWhiteButtonMedium
-                  href="/questions/question1"
+                  href="/questionsCustom/question1"
                   text="Vergleichen"
                 />
               </HomepageCard>

@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <body
-        className={`${sourceSans.className} text-slate-800`}
+        className={`${sourceSans.className} text-slate-800 overflow-auto`}
       >
         <div className="flex flex-col h-full min-h-screen">
           <Nav />

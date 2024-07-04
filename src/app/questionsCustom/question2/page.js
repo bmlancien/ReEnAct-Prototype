@@ -13,7 +13,7 @@ export default function Question2() {
       <Breadcrumb />
       <LayoutMap>
         <div className="flex-1 overflow-auto w-full border-r border-slate-200">
-          <div className="pt-12 pb-32 pe-12">
+          <div className="pt-12 pe-12">
             <div className="flex justify-between pb-8">
               <h1 className="text-xl font-semibold">Kennzahlen der Region 2024</h1>
               <Goal />
@@ -111,14 +111,14 @@ export default function Question2() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questions/question1"
+              href="/questionsCustom/question1"
               icon={ArrowLeftIcon}
               text="Zurück"
             />
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questions/question3"
+              href="/questionsCustom/question3"
               icon={ArrowRightIcon}
               text="Weiter"
             />

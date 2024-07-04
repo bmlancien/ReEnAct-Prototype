@@ -4,7 +4,7 @@ import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
-import Slider from "../../../components//common/Slider";
+import Slider from "../../../components/common/Slider";
 import { useState } from 'react';
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
@@ -33,7 +33,7 @@ export default function Question3() {
             <span>Bitte nutzen Sie die Einstellungen und Schieberegler, um Ihr zukünftiges Szenario zu erstellen.</span>
             <Goal />
           </div>
-          <div className="flex pt-12 pb-32 pe-12">
+          <div className="flex pt-12 pe-12">
             <div className="flex grow">
               <div className="me-4">
                 <div className="flex items-center pb-4">
@@ -140,14 +140,14 @@ export default function Question3() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questions/question2"
+              href="/questionsCustom/question2"
               icon={ArrowLeftIcon}
               text="Zurück"
             />
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questions/question4"
+              href="/questionsCustom/question4"
               icon={ArrowRightIcon}
               text="Weiter"
             />

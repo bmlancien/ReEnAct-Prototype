@@ -27,7 +27,7 @@ export default function Question1() {
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questions/question2"
+              href="/questionsCustom/question2"
               icon={ArrowRightIcon}
               text="Weiter"
             />
