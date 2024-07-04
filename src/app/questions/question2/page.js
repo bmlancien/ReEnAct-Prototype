@@ -1,6 +1,6 @@
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
-import EnergyShare from "../../../components/charts/EnergyShare";
+import EnergyShareStatic from "../../../components/charts/EnergyShareStatic";
 import Goal from "../../../components/common/Goal";
 import LayoutMap from "../../../components/layout/LayoutMap";
 import Image from "next/image";
@@ -92,7 +92,7 @@ export default function Question2() {
                 <span>Total: <b>31,6 GWh</b></span>
               </div>
             </div>
-            <EnergyShare />
+            <EnergyShareStatic />
           </div>
         </div>
         <div className="flex-1 overflow-auto w-full">
