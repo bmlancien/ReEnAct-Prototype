@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HomepageSecondaryCards({ src, text, children }) {
   return (
-    <div className="flex overflow-hidden border border-slate-300 p-6">
+    <div className="flex overflow-hidden border border-slate-200 p-6">
       <div className="pe-4">
         <Image
           className="h-12 w-auto"
