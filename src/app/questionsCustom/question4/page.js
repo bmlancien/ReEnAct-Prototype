@@ -8,7 +8,9 @@ import { LinkIconBlue } from "../../../components/common/Links"
 export default function Question4() {
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb
+        isShare={true}
+      />
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pb-8">
@@ -18,7 +20,7 @@ export default function Question4() {
                 href="#"
                 text="Mit anderen Szenarien vergleichen"
               >
-                <ArrowRightIcon className="h4 w-4 me-2"/>
+                <ArrowRightIcon className="h4 w-4"/>
               </LinkIconBlue>
             </div>
           </div>
