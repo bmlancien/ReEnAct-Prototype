@@ -20,9 +20,9 @@ const EnergyShare = () => {
       {
         label: 'Anteil',
         data: [40, 25, 15, 10, 10],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1,
+        backgroundColor: '#34d399',
+        borderColor: '#34d399',
+        barThickness: 10
       },
     ],
   };
@@ -32,7 +32,7 @@ const EnergyShare = () => {
     scales: {
       x: {
         beginAtZero: true,
-        max: 50,
+        max: 40,
       },
     },
     plugins: {
@@ -41,7 +41,7 @@ const EnergyShare = () => {
       },
       title: {
         display: true,
-        text: 'Anteil pro Energieträger',
+        text: 'Anteil pro Energieträger (%)',
       },
       tooltip: {
         callbacks: {
