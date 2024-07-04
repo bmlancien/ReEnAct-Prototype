@@ -2,7 +2,9 @@ const steps = [
   { name: 'Herausforderungen', href: '/questionsDefault/question1', status: 'current' },
   { name: 'Die Region heute', href: '/questionsDefault/question2', status: 'upcoming' },
   { name: 'Frage 1', href: '/questionsDefault/question3', status: 'upcoming' },
-  { name: 'Zukunftsszenario', href: '/questionsDefault/question4', status: 'upcoming' },
+  { name: 'Frage 2', href: '/questionsDefault/question4', status: 'upcoming' },
+  { name: 'Frage 3', href: '/questionsDefault/question5', status: 'upcoming' },
+  { name: 'Zukunftsszenario', href: '/questionsDefault/question6', status: 'upcoming' },
 ];
 
 export default steps;
