@@ -1,12 +1,14 @@
 import { PrimaryButtonMedium, WhiteButtonMedium, LightButtonMedium, OutlinePrimaryButtonMedium, OutlineWhiteButtonMedium } from "../components/common/Buttons";
 import HomepageCard from "../components/common/HomepageCard";
 import HomepageSecondaryCards from "../components/common/HomepageSecondaryCards";
+import Modal from "../components/common/Modal";
 import { LinkIcon } from "../components/common/Links";
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
   return (
     <>
+      <Modal />
       <main className="grow">
         <div className="bg-emerald-400 py-20">
           <div className="mx-auto max-w-7xl px-8">
