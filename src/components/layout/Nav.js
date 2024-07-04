@@ -1,24 +1,33 @@
 "use client";
 
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { useEffect, useState } from 'react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Montserrat } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const navigation = [
-  { name: 'Startseite', href: '/', current: true },
-  { name: 'Projektinfos', href: '#', current: false },
-  { name: 'Quellen', href: '#', current: false },
-  { name: 'Hilfe', href: '#', current: false }
-]
+  { name: 'Startseite', href: '/', current: false },
+  { name: 'Projektinfos', href: '/pages/infos', current: false },
+  { name: 'Quellen', href: '/pages/source', current: false },
+  { name: 'Hilfe', href: '/pages/help', current: false }
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Nav() {
+  const pathname = usePathname();
+  const [currentPath, setCurrentPath] = useState('');
+
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, [pathname]);
+
   return (
     <Disclosure as="nav" className={`${montserrat.className} bg-white shadow`}>
       {({ open }) => (
@@ -56,10 +65,10 @@ export default function Nav() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'border-sky-500 text-slate-800' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+                          currentPath === item.href ? 'border-sky-500 text-slate-800' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                           'inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-base font-medium text-slate-800',
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={currentPath === item.href ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
@@ -78,10 +87,10 @@ export default function Nav() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-indigo-50 border-indigo-500 text-indigo-700' : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700',
+                    currentPath === item.href ? 'bg-indigo-50 border-indigo-500 text-indigo-700' : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700',
                     'block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700',
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={currentPath === item.href ? 'page' : undefined}
                 >
                   {item.name}
                 </DisclosureButton>
