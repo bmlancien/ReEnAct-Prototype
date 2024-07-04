@@ -12,7 +12,7 @@ export default function Question2() {
     <>
       <Breadcrumb />
       <LayoutMap>
-        <div class="flex-1 overflow-auto w-full border-r border-slate-200">
+        <div className="flex-1 overflow-auto w-full border-r border-slate-200">
           <div className="pt-12 pb-32 pe-12">
             <div className="flex justify-between pb-8">
               <h1 className="text-xl font-semibold">Kennzahlen der Region 2024</h1>
@@ -95,7 +95,7 @@ export default function Question2() {
             <EnergyShare />
           </div>
         </div>
-        <div class="flex-1 overflow-auto w-full">
+        <div className="flex-1 overflow-auto w-full">
           <div className="relative w-full h-screen overflow-hidden">
             <Image
               src="/images/map_image.png"

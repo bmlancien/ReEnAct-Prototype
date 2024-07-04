@@ -13,16 +13,17 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const EnergyShare = () => {
-  const data = {
-    labels: ['Windkraft', 'Photovoltaik', 'Biomasse', 'Wasserstoff', 'Fossile Brennstoffe'],
+const EnergyShare = ({ data }) => {
+  const chartData = {
+    labels: ['Windkraft', 'Photovoltaik', 'Biomasse', 'Wasserstoff'],
     datasets: [
       {
         label: 'Anteil',
-        data: [40, 25, 15, 10, 10],
+        data: data,
         backgroundColor: '#34d399',
         borderColor: '#34d399',
-        barThickness: 10
+        borderWidth: 1,
+        barThickness: 15,
       },
     ],
   };
@@ -32,7 +33,7 @@ const EnergyShare = () => {
     scales: {
       x: {
         beginAtZero: true,
-        max: 40,
+        max: 50,
       },
     },
     plugins: {
@@ -40,8 +41,7 @@ const EnergyShare = () => {
         display: false,
       },
       title: {
-        display: true,
-        text: 'Anteil pro Energieträger (%)',
+        display: false,
       },
       tooltip: {
         callbacks: {
@@ -53,7 +53,7 @@ const EnergyShare = () => {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return <Bar data={chartData} options={options} />;
 };
 
 export default EnergyShare;

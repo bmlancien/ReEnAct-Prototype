@@ -2,13 +2,17 @@
 
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
-import EnergyShare from "../../../components/charts/EnergyShare";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
 import Slider from "../../../components//common/Slider";
 import { useState } from 'react';
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import dynamic from 'next/dynamic';
+
+const EnergyShare = dynamic(() => import('../../../components/charts/EnergyShare'), {
+  ssr: false,
+});
 
 export default function Question3() {
   const [windEnergy, setWindEnergy] = useState(55);
@@ -17,6 +21,8 @@ export default function Question3() {
   const [pvProduction, setPvProduction] = useState(55);
   const [freeSpacePv, setFreeSpacePv] = useState(50);
   const [roofPv, setRoofPv] = useState(50);
+
+  const data = [windEnergy, settlementDistance, landUsage, pvProduction, freeSpacePv, roofPv];
 
   return (
     <>
@@ -122,7 +128,7 @@ export default function Question3() {
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-700 mb-4">Anteil pro Energieträger</h3>
                   <div>
-                    <EnergyShare />
+                    <EnergyShare data={data} />
                   </div>
                 </div>
               </div>
