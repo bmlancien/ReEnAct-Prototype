@@ -17,7 +17,7 @@ export default function Question6() {
             <h1 className="text-xl font-semibold">Mein Zukunftszenario</h1>
             <div className="absolute top-0 right-0">
               <LinkIconBlue
-                href="#"
+                href="/pages/comparison"
                 text="Mit anderen Szenarien vergleichen"
               >
                 <ArrowRightIcon className="h4 w-4"/>
