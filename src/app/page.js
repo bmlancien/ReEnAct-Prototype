@@ -42,7 +42,7 @@ export default function Home() {
                 text="Vergleichen Sie verschiedene Experten-Szenarien"
               >
                 <OutlineWhiteButtonMedium
-                  href="/questionsCustom/question1"
+                  href="/pages/comparison"
                   text="Vergleichen"
                 />
               </HomepageCard>
