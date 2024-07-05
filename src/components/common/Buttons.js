@@ -147,13 +147,13 @@ export const OutlineWhiteButtonSmall = ({ href, icon: Icon, text }) => (
 export const SelectionButtonSmall = ({ icon: Icon, text, selected, onClick }) => (
   <button
     onClick={onClick}
-    className={`block rounded-full me-4 border-2 px-2 text-sm text-center font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800 ${
+    className={`block rounded-full border-2 px-2 text-sm text-center font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800 ${
       selected ? "border-emerald-400 bg-emerald-400 text-slate-800 hover:bg-emerald-500" : "border-slate-100 bg-slate-100 text-slate-800 hover:bg-slate-200"
     }`}
   >
     <span className="flex justify-center items-center">
       {Icon && (
-        <span className="mr-2">
+        <span className="me-2">
           <Icon className="h-4 w-4" />
         </span>
       )}

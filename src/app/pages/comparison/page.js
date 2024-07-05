@@ -4,6 +4,7 @@ import Header from "../../../components/common/Header";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
 import { useState } from 'react';
 import { SelectionButtonSmall } from '../../../components/common/Buttons';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -26,8 +27,8 @@ ChartJS.register(
   ChartDataLabels
 );
 
-const barBackgroundColor = '#cbd5e1';
-const barBackgroundColorSelected = '#34d399';
+const barBackgroundColor = '#e2e8f0';
+const barBackgroundColorSelected = '#10b981';
 const barThickness = '10';
 
 const buttons = [
@@ -49,6 +50,7 @@ const data = [
 
 const ScenarioComparison = () => {
   const [selectedId, setSelectedId] = useState(buttons[0].id);
+  const [displayTitle, setDisplayTitle] = useState(true);
 
   function handleSelected(id) {
     setSelectedId(id);
@@ -62,7 +64,7 @@ const ScenarioComparison = () => {
       .sort((a, b) => b.value - a.value);
   };
 
-  const chartOptions = (title, isHorizontal = false, maxValue) => ({
+  const chartOptions = (title, displayTitle, isHorizontal = false, maxValue) => ({
     indexAxis: isHorizontal ? 'y' : 'x',
     scales: {
       [isHorizontal ? 'x' : 'y']: {
@@ -95,7 +97,7 @@ const ScenarioComparison = () => {
         enabled: false
       },
       title: {
-        display: true,
+        display: displayTitle,
         text: title,
         align: 'start'
       },
@@ -194,7 +196,7 @@ const ScenarioComparison = () => {
       <Header title="Szenarienvergleich" isShare={true} />
       <main>
         <LayoutSimple>
-          <div className="flex space-x-4 mb-4">
+          <div className="flex space-x-4 pb-4 mb-8 border-b">
             {buttons.map((button) => (
               <SelectionButtonSmall
                 key={button.id}
@@ -204,70 +206,85 @@ const ScenarioComparison = () => {
               />
             ))}
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <Bar data={chartDataEnergyProduktion} options={chartOptions("Energieproduktion (GWh)", false, maxEnergyProduction)} />
+          <div className="flex space-x-4 pb-4">
+            <div className="flex justify-between basis-1/2 bg-slate-50 p-4">
+              <div className="flex flex-col justify-between">
+                <div>
+                  <p>Energieproduktion:</p>
+                  <div className="flex">
+                    <div className="text-3xl font-semibold pe-2">
+                      {`${selectedData[0]} GWh`}
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <ArrowUpRightIcon
+                        className="h4 w-4 me-2"
+                      />
+                      <span>
+                        {`+${selectedData[6]} %`}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span className="text-sm">
+                    {`Energieexport: ${selectedData[8]} GWh`}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <Bar data={chartDataEnergyProduktion} options={chartOptions("", false, false, maxEnergyProduction)} />
+              </div>
             </div>
-            <div>
-              <Bar data={chartDataLandUse} options={chartOptions("Anteil Flächennutzung (%)", false, maxLandUse)} />
-            </div>
-            <div>
-              <Bar data={chartDataWindShare} options={chartOptions("Anteil Windkraft (%)", true, maxWindShare)} />
-            </div>
-            <div>
-              <Bar data={chartDataPVShare} options={chartOptions("Anteil Photovoltaik (%)", true, maxPVShare)} />
-            </div>
-            <div>
-              <Bar data={chartDataBiomassShare} options={chartOptions("Anteil Biomasse (%)", true, maxBiomassShare)} />
-            </div>
-            <div>
-              <Bar data={chartDataHydrogenShare} options={chartOptions("Anteil Wasserstoff (%)", true, maxHydrogenShare)} />
+            <div className="flex justify-between basis-1/2 bg-slate-50 p-4">
+              <div className="flex flex-col justify-between">
+                <div>
+                  <p>Anteil Flächennutzung::</p>
+                  <div className="flex">
+                    <div className="text-3xl font-semibold pe-2">
+                      {`${selectedData[1]} %`}
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <ArrowUpRightIcon
+                        className="h4 w-4 me-2"
+                      />
+                      <span>
+                        {`+${selectedData[7]} %`}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col text-sm">
+                  <span>
+                    {`Wind: ${selectedData[9]} %`}
+                  </span>
+                  <span>
+                    {`Photovoltaik: ${selectedData[10]} %`}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <Bar data={chartDataLandUse} options={chartOptions("", false, false, maxLandUse)} />
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Energieproduktion (GWh)</h2>
-              <p>{selectedData[0]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Anteil Flächennutzung (%)</h2>
-              <p>{selectedData[1]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Anteil Windkraft (%)</h2>
-              <p>{selectedData[2]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Anteil Photovoltaik (%)</h2>
-              <p>{selectedData[3]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Anteil Biomasse (%)</h2>
-              <p>{selectedData[4]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Anteil Wasserstoff (%)</h2>
-              <p>{selectedData[5]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Neuer Wert 1</h2>
-              <p>{selectedData[6]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Neuer Wert 2</h2>
-              <p>{selectedData[7]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Neuer Wert 3</h2>
-              <p>{selectedData[8]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Neuer Wert 4</h2>
-              <p>{selectedData[9]}</p>
-            </div>
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 className="text-xl font-bold">Neuer Wert 5</h2>
-              <p>{selectedData[10]}</p>
+          <div className="flex">
+            <div className="w-50">
+              <div className="flex">
+                <div>
+                  <Bar data={chartDataWindShare} options={chartOptions("Anteil Windkraft (%)", displayTitle, true, maxWindShare)} />
+                </div>
+                <div>
+                  <Bar data={chartDataPVShare} options={chartOptions("Anteil Photovoltaik (%)", displayTitle, true, maxPVShare)} />
+                </div>
+              </div>
+              <div className="flex">
+                <div>
+                  <Bar data={chartDataBiomassShare} options={chartOptions("Anteil Biomasse (%)", displayTitle, true, maxBiomassShare)} />
+                </div>
+                <div>
+                  <Bar data={chartDataHydrogenShare} options={chartOptions("Anteil Wasserstoff (%)", displayTitle, true, maxHydrogenShare)} />
+                </div>
+              </div>
             </div>
           </div>
         </LayoutSimple>
