@@ -53,7 +53,7 @@ export default function Nav() {
                   >
                     <img
                       className="h-8 w-auto"
-                      src="/stemptool_logo.svg"
+                      src="/logo-reenact_cmyk300-farbe-1024x426.jpg"
                       alt="Your Company"
                     />
                   </Link>
