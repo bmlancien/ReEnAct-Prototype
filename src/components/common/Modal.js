@@ -135,7 +135,7 @@ export default function Modal() {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="inline-flex w-full justify-center rounded-md bg-emerald-500 px-3 py-2 font-semibold shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                className="inline-flex w-full justify-center rounded-md bg-sky-500 px-3 py-2 font-semibold shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               >
                 Schließen
               </button>

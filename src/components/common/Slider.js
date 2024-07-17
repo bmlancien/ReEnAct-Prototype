@@ -26,7 +26,7 @@ const Slider = ({ label, min, max, step, value, onChange, unit }) => {
               style={{
                 background: getTrackBackground({
                   values: [value],
-                  colors: ['#34d399', '#ccc'],
+                  colors: ['#38bdf8', '#ccc'],
                   min,
                   max,
                 }),
@@ -42,7 +42,7 @@ const Slider = ({ label, min, max, step, value, onChange, unit }) => {
           return (
             <div
               {...restThumbProps}
-              className="h-4 w-4 bg-green-500 rounded-full shadow"
+              className="h-4 w-4 bg-sky-600 rounded-full shadow"
               key={key}
             />
           );

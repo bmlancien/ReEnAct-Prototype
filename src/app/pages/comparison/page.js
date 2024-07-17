@@ -28,7 +28,7 @@ ChartJS.register(
 );
 
 const barBackgroundColor = '#e2e8f0';
-const barBackgroundColorSelected = '#10b981';
+const barBackgroundColorSelected = '#0ea5e9';
 const barThickness = '10';
 
 const buttons = [
