@@ -20,8 +20,8 @@ const EnergyShareStatic = () => {
       {
         label: 'Anteil',
         data: [40, 25, 15, 10, 10],
-        backgroundColor: '#34d399',
-        borderColor: '#34d399',
+        backgroundColor: '#38bdf8',
+        borderColor: '#38bdf8',
         barThickness: 10
       },
     ],

@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Modal />
       <main className="grow">
-        <div className="bg-emerald-400 py-20">
+        <div className="bg-sky-400 py-20">
           <div className="mx-auto max-w-7xl px-8">
             <h1
               className="text-3xl font-bold text-center pb-12">
