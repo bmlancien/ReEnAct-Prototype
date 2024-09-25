@@ -18,16 +18,16 @@ export default function Home() {
             </h1>
           </div>
           <div className="mx-auto max-w-7xl px-8">
-            <div className="columns-3">
-              <HomepageCard
+            <div className="columns-2">
+              {/* <HomepageCard
                 src="/images/quiz.png"
-                text="Finden Sie Ihr ideales Experten-Szenario in wenigen Fragen"
+                text="Finden Sie Ihr ideales vorgefetigtes Szenario in wenigen Fragen"
               >
                 <WhiteButtonMedium
                   href="/questionsDefault/question1"
                   text="Los geht's"
                 />
-              </HomepageCard>
+              </HomepageCard> */}
               <HomepageCard
                 src="/images/switch.png"
                 text="Gestalten Sie Ihr eigenes, individuelles Szenario"
@@ -39,7 +39,7 @@ export default function Home() {
               </HomepageCard>
               <HomepageCard
                 src="/images/compare.png"
-                text="Vergleichen Sie verschiedene Experten-Szenarien"
+                text="Vergleichen Sie verschiedene vorgefetigte Szenarien"
               >
                 <OutlineWhiteButtonMedium
                   href="/pages/comparison"
