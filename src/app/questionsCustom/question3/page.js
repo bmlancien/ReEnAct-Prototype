@@ -123,7 +123,7 @@ export default function Question3() {
                 <div className="p-6 bg-gray-100 border-b">
                   <h2 className="text-xl font-medium text-gray-700">Energieproduktion 2040</h2>
                   <p className="text-3xl font-bold text-gray-900">32,8 GWh</p>
-                  <p className="text-lg text-gray-600">2023: 31,6 GWh</p>
+                  <p className="text-lg text-gray-600">2023: 126,68 GWh</p>
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-700 mb-4">Anteil pro Energieträger</h3>

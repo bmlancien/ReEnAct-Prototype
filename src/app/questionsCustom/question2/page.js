@@ -26,18 +26,26 @@ export default function Question2() {
                 <span className="font-semibold">Überblick</span>
               </div>
               <table className="table-auto w-full">
-                <tbody>
+              <tbody>
                   <tr>
                     <td className="border px-4 py-2">Bevölkerung</td>
                     <td className="border px-4 py-2">5.998</td>
                   </tr>
                   <tr>
+                    <td className="border px-4 py-2">Fläche</td>
+                    <td className="border px-4 py-2">170,46 km<sup>2</sup></td>
+                  </tr>
+                  <tr>
+                    <td className="border px-4 py-2">Fläche Erneuerbare Energien</td>
+                    <td className="border px-4 py-2">20,85 km<sup>2</sup></td>
+                  </tr>
+                  <tr>
                     <td className="border px-4 py-2">Arbeitsplätze im Energiesektor</td>
-                    <td className="border px-4 py-2">180</td>
+                    <td className="border px-4 py-2"><span className="italic text-indigo-700">180</span></td>
                   </tr>
                   <tr>
                     <td className="border px-4 py-2">Investitionen in ern. Energien</td>
-                    <td className="border px-4 py-2">3.5 Mio. €</td>
+                    <td className="border px-4 py-2"><span className="italic text-indigo-700">3.5 Mio. €</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -58,7 +66,7 @@ export default function Question2() {
                 <span className="font-semibold">CO<sub>2</sub> Ausstoß</span>
               </div>
               <div className="border border-slate-200 p-4">
-                <div className="pb-2"><b>0,08 Tonnen CO2</b> Ausstoß in 2024</div>
+                <div className="pb-2"><b><span className="italic text-indigo-700">0,08 Tonnen CO2</span></b> Ausstoß in 2024</div>
                 <div className="flex">
                   <div className="pe-4">
                     <svg width="32" height="32" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +97,7 @@ export default function Question2() {
                 <span className="font-semibold">Energieproduktion</span>
               </div>
               <div>
-                <span>Total: <b>31,6 GWh</b></span>
+                <span>Total: <b>126,68 GWh</b></span>
               </div>
             </div>
             <EnergyShareStatic />

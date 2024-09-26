@@ -15,11 +15,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const EnergyShareStatic = () => {
   const data = {
-    labels: ['Windkraft', 'Photovoltaik', 'Biomasse', 'Wasserstoff', 'Fossile Brennstoffe'],
+    labels: ['Windenergie', 'Photovoltaik', 'Fossile Brennstoffe (?)'],
     datasets: [
       {
         label: 'Anteil',
-        data: [40, 25, 15, 10, 10],
+        data: [112.13, 14.55, 100],
         backgroundColor: '#38bdf8',
         borderColor: '#38bdf8',
         barThickness: 10
@@ -32,7 +32,7 @@ const EnergyShareStatic = () => {
     scales: {
       x: {
         beginAtZero: true,
-        max: 40,
+        max: 120,
       },
     },
     plugins: {
