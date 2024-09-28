@@ -43,7 +43,7 @@ export default function Question4() {
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Anteil Flächennutzung</h3>
-                <p className="text-3xl font-bold">8,8%</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">8,8%</span></p>
                 <p className="text-sm">+150%</p>
               </div>
             </div>
@@ -64,14 +64,14 @@ export default function Question4() {
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Biomasse</h3>
-                <p className="text-3xl font-bold">3,0 GWh</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">3,0 GWh</span></p>
                 <p className="text-sm">+50%</p>
               </div>
             </div>
             <div className="w-full md:w-1/6 px-2 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Wasserstoff</h3>
-                <p className="text-3xl font-bold">4,8 GWh</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">4,8 GWh</span></p>
                 <p className="text-sm">+125%</p>
               </div>
             </div>

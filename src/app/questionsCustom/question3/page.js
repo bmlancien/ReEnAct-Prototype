@@ -68,7 +68,7 @@ export default function Question3() {
                   unit="GWh"
                 />
                 <Slider
-                  label="Abstand zu Siedlungen (m)"
+                  label="Abstand zu Siedlungen (m) ?"
                   min={400}
                   max={1000}
                   step={1}
@@ -77,7 +77,7 @@ export default function Question3() {
                   unit="m"
                 />
                 <Slider
-                  label="Nutzung Landschaftsschutzgebiete (%)"
+                  label="Nutzung Landschaftsschutzgebiete (%) ?"
                   min={4}
                   max={12}
                   step={1}
@@ -126,7 +126,7 @@ export default function Question3() {
                   <h2 className="text-xl font-medium text-gray-700">Energieproduktion 2040</h2>
                   {/* Display the total energy production */}
                   <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>
-                  <p className="text-lg text-gray-600">2023: 126,68 GWh</p>
+                  <p className="text-lg text-gray-600">2023: <span className="italic text-indigo-700">126,68 GWh</span></p>
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-700 mb-4">Anteil pro Energieträger</h3>
