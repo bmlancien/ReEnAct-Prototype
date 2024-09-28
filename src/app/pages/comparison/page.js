@@ -74,6 +74,8 @@ const ScenarioComparison = () => {
   };
 
   const chartOptions = (title, displayTitle, isHorizontal = false, maxValue) => ({
+    responsive: true,
+    maintainAspectRatio: false,
     indexAxis: isHorizontal ? 'y' : 'x',
     scales: {
       [isHorizontal ? 'x' : 'y']: {
@@ -241,7 +243,7 @@ const ScenarioComparison = () => {
                   </span>
                 </div>
               </div>
-              <div>
+              <div className="w-full">
                 <Bar data={chartDataEnergyProduktion} options={chartOptions("", false, false, maxEnergyProduction)} />
               </div>
             </div>
@@ -272,26 +274,24 @@ const ScenarioComparison = () => {
                   </span>
                 </div>
               </div>
-              <div>
+              <div className="w-full">
                 <Bar data={chartDataLandUse} options={chartOptions("", false, false, maxLandUse)} />
               </div>
             </div>
           </div>
           <div className="flex">
-            <div className="w-50">
+            <div className="w-full">
               <div className="flex">
-                <div>
+                <div style={{ height: '300px' }}>
                   <Bar data={chartDataWindShare} options={chartOptions("Anteil Windkraft (%)", displayTitle, true, maxWindShare)} />
                 </div>
-                <div>
+                <div style={{ height: '300px' }}>
                   <Bar data={chartDataPVShare} options={chartOptions("Anteil Photovoltaik (%)", displayTitle, true, maxPVShare)} />
                 </div>
-              </div>
-              <div className="flex">
-                <div>
+                <div style={{ height: '300px' }}>
                   <Bar data={chartDataBiomassShare} options={chartOptions("Anteil Biomasse (%)", displayTitle, true, maxBiomassShare)} />
                 </div>
-                <div>
+                <div style={{ height: '300px' }}>
                   <Bar data={chartDataHydrogenShare} options={chartOptions("Anteil Wasserstoff (%)", displayTitle, true, maxHydrogenShare)} />
                 </div>
               </div>
