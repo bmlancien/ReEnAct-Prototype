@@ -5,6 +5,7 @@ import Breadcrumb from "../../../components/common/Breadcrumb";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
 import Slider from "../../../components/common/Slider";
+import Switch from "../../../components/common/Switch";
 import { useState } from 'react';
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
@@ -15,14 +16,14 @@ const EnergyShare = dynamic(() => import('../../../components/charts/EnergyShare
 });
 
 export default function Question3() {
-  const [windEnergy, setWindEnergy] = useState(55);
+  const [windEnergy, setWindEnergy] = useState(120);
   const [settlementDistance, setSettlementDistance] = useState(700);
   const [landUsage, setLandUsage] = useState(8);
-  const [pvProduction, setPvProduction] = useState(55);
-  const [freeSpacePv, setFreeSpacePv] = useState(50);
+  const [pvProduction, setPvProduction] = useState(100);
+  const [pvRoofProduction, setpvRoofProduction] = useState(1);
   const [roofPv, setRoofPv] = useState(50);
 
-  const data = [windEnergy, settlementDistance, landUsage, pvProduction, freeSpacePv, roofPv];
+  const data = [windEnergy, settlementDistance, landUsage, pvProduction, pvRoofProduction, roofPv];
 
   return (
     <>
@@ -33,9 +34,9 @@ export default function Question3() {
             <span>Bitte nutzen Sie die Einstellungen und Schieberegler, um Ihr zukünftiges Szenario zu erstellen.</span>
             <Goal />
           </div>
-          <div className="flex pt-12 pe-12">
-            <div className="flex grow">
-              <div className="me-4">
+          <div className="flex pt-12 justify-between">
+            <div className="flex grow max-w-[60rem] pe-8">
+              <div className="me-4 flex-1">
                 <div className="flex items-center pb-4">
                   <span className="me-2">
                     <svg width="32" height="32" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -51,15 +52,18 @@ export default function Question3() {
                     </svg>
                   </span>
                   <h2 className="text-lg font-semibold">Windkraft</h2>
+                  <div className="ms-2">
+                    <Switch />
+                  </div>
                 </div>
                 <Slider
-                  label="Anteil an Energieproduktion (%)"
-                  min={30}
-                  max={80}
-                  step={1}
+                  label="Erzeugte Energie (GWh)"
+                  min={112.13}
+                  max={170.5}
+                  step={10}
                   value={windEnergy}
                   onChange={setWindEnergy}
-                  unit="%"
+                  unit="GWh"
                 />
                 <Slider
                   label="Abstand zu Siedlungen (m)"
@@ -80,7 +84,7 @@ export default function Question3() {
                   unit="%"
                 />
               </div>
-              <div className="ms-4">
+              <div className="ms-4 flex-1">
                 <div className="flex items-center pb-4">
                   <span className="me-2">
                     <svg width="32" height="32" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -88,24 +92,29 @@ export default function Question3() {
                     </svg>
                   </span>
                   <h2 className="text-lg font-semibold">Photovoltaik</h2>
+                  <div className="ms-2">
+                    <Switch />
+                  </div>
                 </div>
+                <h3 className="text-sm pt-2">Freiflächen</h3>
                 <Slider
-                  label="Anteil an Energieproduktion (%)"
-                  min={30}
-                  max={80}
-                  step={1}
+                  label="Erzeugte Energie (GWh)"
+                  min={13.82}
+                  max={259.73}
+                  step={10}
                   value={pvProduction}
                   onChange={setPvProduction}
-                  unit="%"
+                  unit="GWh"
                 />
+                <h3 className="text-sm pt-2">Dachanlagen</h3>
                 <Slider
-                  label="Anteil Freiflächen-PV (%)"
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={freeSpacePv}
-                  onChange={setFreeSpacePv}
-                  unit="%"
+                  label="Erzeugte Energie (GWh)"
+                  min={0.73}
+                  max={2.34}
+                  step={0.5}
+                  value={pvRoofProduction}
+                  onChange={setpvRoofProduction}
+                  unit="GWh"
                 />
                 <Slider
                   label="Anteil Aufdach-PV (%)"
