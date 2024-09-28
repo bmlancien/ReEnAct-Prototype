@@ -1,7 +1,3 @@
-"use client";
-
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
@@ -10,27 +6,6 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
 
 export default function Question4() {
-  const searchParams = useSearchParams();  // Hook to get query params
-  const [isClient, setIsClient] = useState(false); // State to check if it's client-side
-  const [totalEnergy, setTotalEnergy] = useState('N/A');
-  const [windEnergy, setWindEnergy] = useState('N/A');
-  const [pvEnergy, setPvEnergy] = useState('N/A');
-
-  // This useEffect ensures that the logic only runs after the component has mounted in the client
-  useEffect(() => {
-    setIsClient(true); // Set to true when the component is mounted
-    if (searchParams) {
-      setTotalEnergy(searchParams.get('totalEnergy') || 'N/A');
-      setWindEnergy(searchParams.get('windEnergy') || 'N/A');
-      setPvEnergy(searchParams.get('pvEnergy') || 'N/A');
-    }
-  }, [searchParams]);
-
-  // While the component is not mounted on the client, return a loading state or nothing
-  if (!isClient) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <>
       <Breadcrumb
@@ -53,7 +28,7 @@ export default function Question4() {
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Gesamtenergie&nbsp;-produktion</h3>
-                <p className="text-3xl font-bold">{totalEnergy} GWh</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">234 GWh</span></p>
                 <p className="text-sm">+8,3%</p>
               </div>
             </div>
@@ -67,14 +42,14 @@ export default function Question4() {
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Windkraft</h3>
-                <p className="text-3xl font-bold">{windEnergy} GWh</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">100 GWh</span></p>
                 <p className="text-sm">+200%</p>
               </div>
             </div>
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">Photovoltaik</h3>
-                <p className="text-3xl font-bold">{pvEnergy} GWh</p>
+                <p className="text-3xl font-bold"><span className="italic text-indigo-700">111 GWh</span></p>
                 <p className="text-sm">+200%</p>
               </div>
             </div>

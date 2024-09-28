@@ -149,11 +149,11 @@ export default function Question3() {
             />
           </div>
           <div className="pe-2">
-          <PrimaryButtonMedium
-            href={`/questionsCustom/question4?totalEnergy=${totalEnergyProduction.toFixed(1)}&windEnergy=${windEnergy.toFixed(1)}&pvEnergy=${pvProduction.toFixed(1)}`}
-            icon={ArrowRightIcon}
-            text="Ergebnisse sehen"
-          />
+            <PrimaryButtonMedium
+              href="/questionsCustom/question4"
+              icon={ArrowRightIcon}
+              text="Ergebnisse sehen"
+            />
           </div>
         </div>
       </BottomNav>
