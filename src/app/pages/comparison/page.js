@@ -32,19 +32,26 @@ const barBackgroundColorSelected = '#0ea5e9';
 const barThickness = '10';
 
 const buttons = [
-  { id: 1, text: "Mein Szenario" },
-  { id: 2, text: "Szenario Wind+ 2040" },
-  { id: 3, text: "Szenario PV+ 2040" },
-  { id: 4, text: "Szenario H2+ 2040" },
-  { id: 5, text: "Szenario Mix 2040" }
+  { id: 1, text: "Wind – Repowering" },
+  { id: 2, text: "Zubau Wind und PV" },
+  { id: 3, text: "Zubau PV" },
+  { id: 4, text: "Moorbewirtschaftung" },
+  { id: 5, text: "Wasserstoff" }
+  /*
+  { id: 6, text: "Kostenoptimierung" },
+  { id: 7, text: "Hohe CO2-Preise" },
+  { id: 8, text: "Suffizienz" },
+  { id: 9, text: "Autarkie" },
+  { id: 10, text: "Business as usual" }
+  */
 ];
 
 const data = [
-  { id: 1, values: [32.8, 8.80, 25.53, 22.47, 35.99, 16.01, 2.50, 150, 2.80, 5.00, 3.80] },
-  { id: 2, values: [34.6, 12.4, 38.10, 18.90, 25.05, 17.95, 8.30, 170, 3.60, 4.20, 2.40] },
-  { id: 3, values: [36.6, 11.2, 45.20, 25.80, 18.25, 10.75, 6.40, 230, 4.10, 5.70, 1.20] },
-  { id: 4, values: [35.1, 10.0, 28.35, 18.25, 26.85, 26.55, 9.10, 190, 3.50, 4.80, 2.20] },
-  { id: 5, values: [33.9, 7.10, 12.10, 38.05, 30.20, 19.65, 7.20, 250, 5.30, 6.10, 3.40] }
+  { id: 1, values: [282.8, 8.80, 25.53, 22.47, 35.99, 16.01, 2.50, 150, 2.80, 5.00, 3.80] },
+  { id: 2, values: [214.6, 12.4, 38.10, 18.90, 25.05, 17.95, 8.30, 170, 3.60, 4.20, 2.40] },
+  { id: 3, values: [226.6, 11.2, 45.20, 25.80, 18.25, 10.75, 6.40, 230, 4.10, 5.70, 1.20] },
+  { id: 4, values: [205.1, 10.0, 28.35, 18.25, 26.85, 26.55, 9.10, 190, 3.50, 4.80, 2.20] },
+  { id: 5, values: [186.9, 7.10, 12.10, 38.05, 30.20, 19.65, 7.20, 250, 5.30, 6.10, 3.40] }
 ];
 
 
@@ -112,12 +119,12 @@ const ScenarioComparison = () => {
     }
   });
 
-  const maxEnergyProduction = Math.max(...sortedData(0).map(d => d.value)) + 10;
-  const maxLandUse = Math.max(...sortedData(1).map(d => d.value)) + 10;
-  const maxWindShare = Math.max(...sortedData(2).map(d => d.value)) + 10;
-  const maxPVShare = Math.max(...sortedData(3).map(d => d.value)) + 10;
-  const maxBiomassShare = Math.max(...sortedData(4).map(d => d.value)) + 10;
-  const maxHydrogenShare = Math.max(...sortedData(5).map(d => d.value)) + 10;
+  const maxEnergyProduction = Math.max(...sortedData(0).map(d => d.value)) + 50;
+  const maxLandUse = Math.max(...sortedData(1).map(d => d.value)) + 50;
+  const maxWindShare = Math.max(...sortedData(2).map(d => d.value)) + 50;
+  const maxPVShare = Math.max(...sortedData(3).map(d => d.value)) + 50;
+  const maxBiomassShare = Math.max(...sortedData(4).map(d => d.value)) + 50;
+  const maxHydrogenShare = Math.max(...sortedData(5).map(d => d.value)) + 50;
 
   const chartDataEnergyProduktion = {
     labels: sortedData(0).map(d => buttons.find(button => button.id === d.id).text),
@@ -196,6 +203,7 @@ const ScenarioComparison = () => {
       <Header title="Szenarienvergleich" isShare={true} />
       <main>
         <LayoutSimple>
+          <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigte Szenarien:</h1>
           <div className="flex space-x-4 pb-4 mb-8 border-b">
             {buttons.map((button) => (
               <SelectionButtonSmall
@@ -213,7 +221,7 @@ const ScenarioComparison = () => {
                   <p>Energieproduktion:</p>
                   <div className="flex">
                     <div className="text-3xl font-semibold pe-2">
-                      {`${selectedData[0]} GWh`}
+                      <span className="italic text-indigo-700">{`${selectedData[0]} GWh`}</span>
                     </div>
                     <div className="flex items-center text-sm">
                       <ArrowUpRightIcon
@@ -227,7 +235,7 @@ const ScenarioComparison = () => {
                 </div>
                 <div>
                   <span className="text-sm">
-                    {`Energieexport: ${selectedData[8]} GWh`}
+                    <span className="italic text-indigo-700">{`Energieexport: ${selectedData[8]} GWh`}</span>
                   </span>
                 </div>
               </div>
@@ -241,7 +249,7 @@ const ScenarioComparison = () => {
                   <p>Anteil Flächennutzung::</p>
                   <div className="flex">
                     <div className="text-3xl font-semibold pe-2">
-                      {`${selectedData[1]} %`}
+                      <span className="italic text-indigo-700">{`${selectedData[1]} %`}</span>
                     </div>
                     <div className="flex items-center text-sm">
                       <ArrowUpRightIcon
@@ -255,10 +263,10 @@ const ScenarioComparison = () => {
                 </div>
                 <div className="flex flex-col text-sm">
                   <span>
-                    {`Wind: ${selectedData[9]} %`}
+                    <span className="italic text-indigo-700">{`Wind: ${selectedData[9]} %`}</span>
                   </span>
                   <span>
-                    {`Photovoltaik: ${selectedData[10]} %`}
+                    <span className="italic text-indigo-700">{`Photovoltaik: ${selectedData[10]} %`}</span>
                   </span>
                 </div>
               </div>
