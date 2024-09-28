@@ -28,8 +28,9 @@ ChartJS.register(
 );
 
 const barBackgroundColor = '#e2e8f0';
-const barBackgroundColorSelected = '#0ea5e9';
-const barThickness = '10';
+const barBackgroundColorSelected = '#4f46e5';
+const barThicknessMd = '8';
+const barThicknessSm = '4';
 
 const buttons = [
   { id: 1, text: "Wind – Repowering" },
@@ -115,7 +116,12 @@ const ScenarioComparison = () => {
       datalabels: {
         anchor: 'end',
         align: 'end',
-        color: '#000',
+        color: (context) => {
+          const dataIndex = context.dataIndex;
+          const label = context.chart.data.labels[dataIndex];
+          const scenarioId = buttons.find(button => button.text === label)?.id; 
+          return scenarioId === selectedId ? '#4f46e5' : '#a3a3a3';
+        },
         font: {
           weight: 'bold'
         }
@@ -137,7 +143,7 @@ const ScenarioComparison = () => {
         label: 'Energieproduktion (GWh)',
         data: sortedData(0).map(d => d.values[0]),
         backgroundColor: sortedData(0).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessMd
       }
     ]
   };
@@ -149,7 +155,7 @@ const ScenarioComparison = () => {
         label: 'Anteil Flächennutzung (%)',
         data: sortedData(1).map(d => d.values[1]),
         backgroundColor: sortedData(1).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessMd
       }
     ]
   };
@@ -161,7 +167,7 @@ const ScenarioComparison = () => {
         label: 'Anteil Windkraft (%)',
         data: sortedData(2).map(d => d.values[2]),
         backgroundColor: sortedData(2).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessSm
       }
     ]
   };
@@ -173,7 +179,7 @@ const ScenarioComparison = () => {
         label: 'Anteil Photovoltaik (%)',
         data: sortedData(3).map(d => d.values[3]),
         backgroundColor: sortedData(3).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessSm
       }
     ]
   };
@@ -185,7 +191,7 @@ const ScenarioComparison = () => {
         label: 'Anteil Biomasse (%)',
         data: sortedData(4).map(d => d.values[4]),
         backgroundColor: sortedData(4).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessSm
       }
     ]
   };
@@ -197,7 +203,7 @@ const ScenarioComparison = () => {
         label: 'Anteil Wasserstoff (%)',
         data: sortedData(5).map(d => d.values[5]),
         backgroundColor: sortedData(5).map(d => d.id === selectedId ? barBackgroundColorSelected : barBackgroundColor),
-        barThickness: barThickness
+        barThickness: barThicknessSm
       }
     ]
   };
@@ -207,7 +213,7 @@ const ScenarioComparison = () => {
       <Header title="Szenarienvergleich" isShare={true} />
       <main>
         <LayoutSimple>
-          <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigte Szenarien:</h1>
+          <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigten Szenarien:</h1>
           <div className="flex space-x-4 pb-4 mb-8 border-b">
             {buttons.map((button) => (
               <SelectionButtonSmall
