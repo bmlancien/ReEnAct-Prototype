@@ -36,14 +36,12 @@ const buttons = [
   { id: 2, text: "Zubau Wind und PV" },
   { id: 3, text: "Zubau PV" },
   { id: 4, text: "Moorbewirtschaftung" },
-  { id: 5, text: "Wasserstoff" }
-  /*
+  { id: 5, text: "Wasserstoff" },
   { id: 6, text: "Kostenoptimierung" },
   { id: 7, text: "Hohe CO2-Preise" },
   { id: 8, text: "Suffizienz" },
   { id: 9, text: "Autarkie" },
   { id: 10, text: "Business as usual" }
-  */
 ];
 
 const data = [
@@ -51,9 +49,13 @@ const data = [
   { id: 2, values: [214.6, 12.4, 38.10, 18.90, 25.05, 17.95, 8.30, 170, 3.60, 4.20, 2.40] },
   { id: 3, values: [226.6, 11.2, 45.20, 25.80, 18.25, 10.75, 6.40, 230, 4.10, 5.70, 1.20] },
   { id: 4, values: [205.1, 10.0, 28.35, 18.25, 26.85, 26.55, 9.10, 190, 3.50, 4.80, 2.20] },
-  { id: 5, values: [186.9, 7.10, 12.10, 38.05, 30.20, 19.65, 7.20, 250, 5.30, 6.10, 3.40] }
+  { id: 5, values: [186.9, 7.10, 12.10, 38.05, 30.20, 19.65, 7.20, 250, 5.30, 6.10, 3.40] },
+  { id: 6, values: [250.1, 8.90, 27.80, 22.90, 29.10, 17.10, 7.50, 160, 4.30, 5.20, 3.00] },
+  { id: 7, values: [230.2, 9.30, 35.30, 27.50, 20.90, 14.30, 6.90, 180, 3.90, 5.00, 2.70] },
+  { id: 8, values: [192.4, 11.80, 33.10, 29.60, 25.20, 21.50, 8.60, 240, 4.60, 5.90, 2.80] },
+  { id: 9, values: [221.5, 10.50, 28.60, 24.70, 28.30, 20.60, 6.30, 220, 4.40, 4.70, 1.50] },
+  { id: 10, values: [180.7, 6.90, 10.90, 40.20, 31.70, 18.90, 7.10, 260, 5.50, 6.20, 3.60] }
 ];
-
 
 const ScenarioComparison = () => {
   const [selectedId, setSelectedId] = useState(buttons[0].id);
@@ -246,7 +248,7 @@ const ScenarioComparison = () => {
             <div className="flex justify-between basis-1/2 bg-slate-50 p-4">
               <div className="flex flex-col justify-between">
                 <div>
-                  <p>Anteil Flächennutzung::</p>
+                  <p>Anteil Flächennutzung:</p>
                   <div className="flex">
                     <div className="text-3xl font-semibold pe-2">
                       <span className="italic text-indigo-700">{`${selectedData[1]} %`}</span>
