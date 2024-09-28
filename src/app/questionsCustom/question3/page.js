@@ -21,9 +21,11 @@ export default function Question3() {
   const [landUsage, setLandUsage] = useState(8);
   const [pvProduction, setPvProduction] = useState(100);
   const [pvRoofProduction, setpvRoofProduction] = useState(1);
-  const [roofPv, setRoofPv] = useState(50);
 
-  const data = [windEnergy, settlementDistance, landUsage, pvProduction, pvRoofProduction, roofPv];
+  // Calculate total energy production
+  const totalEnergyProduction = windEnergy + pvProduction + pvRoofProduction;
+
+  const data = [windEnergy, settlementDistance, landUsage, pvProduction, pvRoofProduction];
 
   return (
     <>
@@ -116,22 +118,14 @@ export default function Question3() {
                   onChange={setpvRoofProduction}
                   unit="GWh"
                 />
-                <Slider
-                  label="Anteil Aufdach-PV (%)"
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={roofPv}
-                  onChange={setRoofPv}
-                  unit="%"
-                />
               </div>
             </div>
             <div className="flex justify-end">
               <div className="w-full max-w-4xl bg-white border rounded-lg shadow-md">
                 <div className="p-6 bg-gray-100 border-b">
                   <h2 className="text-xl font-medium text-gray-700">Energieproduktion 2040</h2>
-                  <p className="text-3xl font-bold text-gray-900">32,8 GWh</p>
+                  {/* Display the total energy production */}
+                  <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>
                   <p className="text-lg text-gray-600">2023: 126,68 GWh</p>
                 </div>
                 <div className="p-6">

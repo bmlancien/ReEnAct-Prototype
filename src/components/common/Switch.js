@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 
 export default function Example() {
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(true)
 
   return (
     <Switch
