@@ -1,22 +1,24 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Range, getTrackBackground } from 'react-range';
+import dynamic from 'next/dynamic';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
+
+const Range = dynamic(() => import('react-range'), { ssr: false }); // Load Range dynamically with SSR disabled
 
 const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure the component only runs client-side by using useEffect
+  // Ensure we are in the client and not on the server
   useEffect(() => {
-    setIsClient(true); // This ensures that the component only runs on the client
+    setIsClient(true); // Set this to true when on the client
   }, []);
 
   // Clamp the value to ensure it's between min and max
   const clampedValue = Math.max(min, Math.min(value, max));
 
   if (!isClient) {
-    // Don't render the Range component on the server
+    // Avoid rendering anything until we are in the client
     return null;
   }
 
@@ -46,12 +48,7 @@ const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
                 {...restTrackProps}
                 className="h-1 w-full bg-gray-300 rounded relative"
                 style={{
-                  background: getTrackBackground({
-                    values: [clampedValue],
-                    colors: ['#38bdf8', '#ccc'],
-                    min,
-                    max,
-                  }),
+                  background: `linear-gradient(to right, #38bdf8 ${((clampedValue - min) / (max - min)) * 100}%, #ccc 0%)`,
                 }}
                 key={key}
               >
