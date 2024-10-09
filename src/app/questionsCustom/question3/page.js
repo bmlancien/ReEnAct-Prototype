@@ -4,7 +4,6 @@ import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
-import Slider from "../../../components/common/Slider";
 import Switch from "../../../components/common/Switch";
 import { useState } from 'react';
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
@@ -12,6 +11,10 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import dynamic from 'next/dynamic';
 
 const EnergyShare = dynamic(() => import('../../../components/charts/EnergyShare'), {
+  ssr: false,
+});
+
+const Slider = dynamic(() => import('../../../components/common/Slider'), {
   ssr: false,
 });
 
@@ -55,36 +58,23 @@ export default function Question3() {
                   </span>
                   <h2 className="text-lg font-semibold">Windkraft</h2>
                   <div className="ms-2">
-                    <Switch />
+                    <Switch 
+                      container="slidersWind"
+                    />
                   </div>
                 </div>
-                <Slider
-                  label="Erzeugte Energie (GWh)"
-                  min={112.13}
-                  max={170.5}
-                  step={10}
-                  value={windEnergy}
-                  onChange={setWindEnergy}
-                  unit="GWh"
-                />
-                <Slider
-                  label="Abstand zu Siedlungen (m) ?"
-                  min={400}
-                  max={1000}
-                  step={1}
-                  value={settlementDistance}
-                  onChange={setSettlementDistance}
-                  unit="m"
-                />
-                <Slider
-                  label="Nutzung Landschaftsschutzgebiete (%) ?"
-                  min={4}
-                  max={12}
-                  step={1}
-                  value={landUsage}
-                  onChange={setLandUsage}
-                  unit="%"
-                />
+                <div id="slidersWind">
+                  <Slider
+                    label="Leistung (MW)"
+                    min={38.72}
+                    max={58.72}
+                    step={2}
+                    value={windEnergy}
+                    onChange={setWindEnergy}
+                    unit="MW"
+                    goal={55}
+                  />
+                </div>
               </div>
               <div className="ms-4 flex-1">
                 <div className="flex items-center pb-4">
@@ -95,29 +85,35 @@ export default function Question3() {
                   </span>
                   <h2 className="text-lg font-semibold">Photovoltaik</h2>
                   <div className="ms-2">
-                    <Switch />
+                    <Switch 
+                      container="slidersPV"
+                    />
                   </div>
                 </div>
-                <h3 className="text-sm pt-2">Freiflächen</h3>
-                <Slider
-                  label="Erzeugte Energie (GWh)"
-                  min={13.82}
-                  max={259.73}
-                  step={10}
-                  value={pvProduction}
-                  onChange={setPvProduction}
-                  unit="GWh"
-                />
-                <h3 className="text-sm pt-2">Dachanlagen</h3>
-                <Slider
-                  label="Erzeugte Energie (GWh)"
-                  min={0.73}
-                  max={2.34}
-                  step={0.5}
-                  value={pvRoofProduction}
-                  onChange={setpvRoofProduction}
-                  unit="GWh"
-                />
+                <div id="slidersPV">
+                  <h3 className="text-sm pt-2">Freiflächen</h3>
+                  <Slider
+                    label="Leistung (MW)"
+                    min={11.80}
+                    max={221.80}
+                    step={10}
+                    value={pvProduction}
+                    onChange={setPvProduction}
+                    unit="MW"
+                    goal={102}
+                  />
+                  <h3 className="text-sm pt-2">Dachanlagen</h3>
+                  <Slider
+                    label="Leistung (MW)"
+                    min={0.62}
+                    max={2.00}
+                    step={0.4}
+                    value={pvRoofProduction}
+                    onChange={setpvRoofProduction}
+                    unit="MW"
+                    goal={1}
+                  />
+                </div>
               </div>
             </div>
             <div className="flex justify-end">
