@@ -26,6 +26,11 @@ export default function Question3() {
   const [pvProduction, setPvProduction] = useState(100);
   const [pvRoofProduction, setpvRoofProduction] = useState(1);
 
+  // Switch state for toggling slider visibility
+  const [showWindSliders, setShowWindSliders] = useState(true);
+  const [showPVSliders, setShowPVSliders] = useState(true);
+
+  // Calculate total energy production
   const totalEnergyProduction = windEnergy + pvProduction + pvRoofProduction;
 
   const data = [windEnergy, settlementDistance, landUsage, pvProduction, pvRoofProduction];
@@ -39,43 +44,85 @@ export default function Question3() {
             <span>Bitte nutzen Sie die Einstellungen und Schieberegler, um Ihr zukünftiges Szenario zu erstellen.</span>
             <Goal />
           </div>
+
           <div className="flex pt-12 justify-between">
             <div className="flex grow max-w-[60rem] pe-8">
               <div className="me-4 flex-1">
-                <Slider
-                  label="Leistung (MW)"
-                  min={38.72}
-                  max={58.72}
-                  step={2}
-                  value={windEnergy}
-                  onChange={setWindEnergy}
-                  unit="MW"
-                  goal={55}
-                />
+                <div className="flex items-center pb-4">
+                  <span className="me-2">
+                    <svg width="32" height="32" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="#1e293b">
+                        <path d="m53.328 37.516c-0.28125 0-0.54688-0.078125-0.79688-0.23438-0.70312-0.4375-0.92188-1.375-0.48438-2.0938l5.3594-8.5469-7.25-23.438c-0.078125-0.23438-0.45312-0.15625-0.45312 0.0625v31.766c0 0.84375-0.67188 1.5156-1.5156 1.5156s-1.5156-0.67188-1.5156-1.5156v-31.766c0-1.7969 1.4688-3.2656 3.2656-3.2656 1.4531 0 2.7031 0.92188 3.1094 2.3125l7.4531 24.125c0.125 0.42188 0.078125 0.875-0.17188 1.25l-5.7344 9.125c-0.26562 0.45312-0.76562 0.70312-1.2656 0.70312z"/>
+                        <path d="m18.359 62.031c-1.125 0-2.2031-0.5625-2.8125-1.5781-0.29688-0.5-0.46875-1.0781-0.46875-1.6719 0-0.79688 0.29688-1.5625 0.8125-2.1562l16.875-18.828c0.29688-0.32812 0.73438-0.5 1.1562-0.5l11.031 0.20312c0.84375 0.015625 1.5 0.70312 1.4844 1.5469-0.015625 0.82812-0.6875 1.4844-1.5156 1.4844h-0.03125l-10.344-0.1875-16.375 18.297c-0.03125 0.03125-0.0625 0.09375-0.0625 0.15625 0.10938 0.21875 0.25 0.26562 0.375 0.1875l27.5-16.516c0.71875-0.4375 1.6406-0.20312 2.0781 0.51562s0.20312 1.6406-0.51562 2.0781l-27.516 16.531c-0.53125 0.29688-1.1094 0.4375-1.6719 0.4375z"/>
+                      </g>
+                    </svg>
+                  </span>
+                  <h2 className="text-lg font-semibold">Windkraft</h2>
+                  <div className="ms-2">
+                    <Switch 
+                      container="slidersWind"
+                      enabled={showWindSliders}
+                      onChange={setShowWindSliders}
+                    />
+                  </div>
+                </div>
+                {showWindSliders && (
+                  <div id="slidersWind">
+                    <Slider
+                      label="Leistung (MW)"
+                      min={38.72}
+                      max={58.72}
+                      step={2}
+                      value={windEnergy}
+                      onChange={setWindEnergy}
+                      unit="MW"
+                      goal={55}
+                    />
+                  </div>
+                )}
               </div>
               <div className="ms-4 flex-1">
-                <Slider
-                  label="Leistung (MW)"
-                  min={11.80}
-                  max={221.80}
-                  step={10}
-                  value={pvProduction}
-                  onChange={setPvProduction}
-                  unit="MW"
-                  goal={102}
-                />
-              </div>
-              <div className="ms-4 flex-1">
-                <Slider
-                  label="Leistung (MW)"
-                  min={0.62}
-                  max={2.00}
-                  step={0.4}
-                  value={pvRoofProduction}
-                  onChange={setpvRoofProduction}
-                  unit="MW"
-                  goal={1}
-                />
+                <div className="flex items-center pb-4">
+                  <span className="me-2">
+                    <svg width="32" height="32" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m72.602 65h4.1992l16.898-45h-30.5l-16.898 45h21.102v10h-35l-0.003906-10h4.1992l17-45h-30.297l-16.902 45h21.102v10h-17.398v5h80v-5h-17.5zm-26.102-40-5.6992 15h-7.1992l5.6016-15h7.3008zm-19.699 0h7.1992l-5.6992 15h-7.1016zm-13.102 35 5.6016-15h7.1016l-5.6016 15zm12.5 0 5.6016-15h7.1992l-5.6992 15zm60.301-35-5.6992 15h-7.1992l5.6016-15h7.3008zm-19.699 0h7.1992l-5.6016 15h-7.1992zm-13.301 35 5.6016-15h7.1992l-5.6016 15zm12.699 0 5.6016-15h7.1992l-5.6992 15z" fill="#1e293b"/>
+                    </svg>
+                  </span>
+                  <h2 className="text-lg font-semibold">Photovoltaik</h2>
+                  <div className="ms-2">
+                    <Switch 
+                      container="slidersPV"
+                      enabled={showPVSliders}
+                      onChange={setShowPVSliders}
+                    />
+                  </div>
+                </div>
+                {showPVSliders && (
+                  <div id="slidersPV">
+                    <h3 className="text-sm pt-2">Freiflächen</h3>
+                    <Slider
+                      label="Leistung (MW)"
+                      min={11.80}
+                      max={221.80}
+                      step={10}
+                      value={pvProduction}
+                      onChange={setPvProduction}
+                      unit="MW"
+                      goal={102}
+                    />
+                    <h3 className="text-sm pt-2">Dachanlagen</h3>
+                    <Slider
+                      label="Leistung (MW)"
+                      min={0.62}
+                      max={2.00}
+                      step={0.4}
+                      value={pvRoofProduction}
+                      onChange={setpvRoofProduction}
+                      unit="MW"
+                      goal={1}
+                    />
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex justify-end">
