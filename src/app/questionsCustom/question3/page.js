@@ -15,6 +15,10 @@ const EnergyShare = dynamic(() => import('../../../components/charts/EnergyShare
   ssr: false,
 });
 
+const Slider = dynamic(() => import('../../../components/common/Slider'), {
+  ssr: false,
+});
+
 export default function Question3() {
   const [windEnergy, setWindEnergy] = useState(120);
   const [settlementDistance, setSettlementDistance] = useState(700);
