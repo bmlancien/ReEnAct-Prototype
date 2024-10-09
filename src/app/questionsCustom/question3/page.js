@@ -4,7 +4,6 @@ import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
-import Slider from "../../../components/common/Slider";
 import Switch from "../../../components/common/Switch";
 import { useState } from 'react';
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
