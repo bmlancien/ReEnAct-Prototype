@@ -55,40 +55,36 @@ export default function Question3() {
                   </span>
                   <h2 className="text-lg font-semibold">Windkraft</h2>
                   <div className="ms-2">
-                    <Switch 
-                      container="slidersWind"
-                    />
+                    <Switch />
                   </div>
                 </div>
-                <div id="slidersWind">
-                  <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={112.13}
-                    max={170.5}
-                    step={10}
-                    value={windEnergy}
-                    onChange={setWindEnergy}
-                    unit="GWh"
-                  />
-                  <Slider
-                    label="Abstand zu Siedlungen (m) ?"
-                    min={400}
-                    max={1000}
-                    step={1}
-                    value={settlementDistance}
-                    onChange={setSettlementDistance}
-                    unit="m"
-                  />
-                  <Slider
-                    label="Nutzung Landschaftsschutzgebiete (%) ?"
-                    min={4}
-                    max={12}
-                    step={1}
-                    value={landUsage}
-                    onChange={setLandUsage}
-                    unit="%"
-                  />
-                </div>
+                <Slider
+                  label="Erzeugte Energie (GWh)"
+                  min={112.13}
+                  max={170.5}
+                  step={10}
+                  value={windEnergy}
+                  onChange={setWindEnergy}
+                  unit="GWh"
+                />
+                <Slider
+                  label="Abstand zu Siedlungen (m) ?"
+                  min={400}
+                  max={1000}
+                  step={1}
+                  value={settlementDistance}
+                  onChange={setSettlementDistance}
+                  unit="m"
+                />
+                <Slider
+                  label="Nutzung Landschaftsschutzgebiete (%) ?"
+                  min={4}
+                  max={12}
+                  step={1}
+                  value={landUsage}
+                  onChange={setLandUsage}
+                  unit="%"
+                />
               </div>
               <div className="ms-4 flex-1">
                 <div className="flex items-center pb-4">
@@ -99,33 +95,29 @@ export default function Question3() {
                   </span>
                   <h2 className="text-lg font-semibold">Photovoltaik</h2>
                   <div className="ms-2">
-                    <Switch 
-                      container="slidersPV"
-                    />
+                    <Switch />
                   </div>
                 </div>
-                <div id="slidersPV">
-                  <h3 className="text-sm pt-2">Freiflächen</h3>
-                  <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={13.82}
-                    max={259.73}
-                    step={10}
-                    value={pvProduction}
-                    onChange={setPvProduction}
-                    unit="GWh"
-                  />
-                  <h3 className="text-sm pt-2">Dachanlagen</h3>
-                  <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={0.73}
-                    max={2.34}
-                    step={0.5}
-                    value={pvRoofProduction}
-                    onChange={setpvRoofProduction}
-                    unit="GWh"
-                  />
-                </div>
+                <h3 className="text-sm pt-2">Freiflächen</h3>
+                <Slider
+                  label="Erzeugte Energie (GWh)"
+                  min={13.82}
+                  max={259.73}
+                  step={10}
+                  value={pvProduction}
+                  onChange={setPvProduction}
+                  unit="GWh"
+                />
+                <h3 className="text-sm pt-2">Dachanlagen</h3>
+                <Slider
+                  label="Erzeugte Energie (GWh)"
+                  min={0.73}
+                  max={2.34}
+                  step={0.5}
+                  value={pvRoofProduction}
+                  onChange={setpvRoofProduction}
+                  unit="GWh"
+                />
               </div>
             </div>
             <div className="flex justify-end">
