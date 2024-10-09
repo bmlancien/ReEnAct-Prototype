@@ -29,7 +29,13 @@ export default function Question1() {
             <PrimaryButtonMedium
               href="/questionsCustom/question2"
               icon={ArrowRightIcon}
-              text="Weiter"
+              text="Details zur Region sehen"
+            />
+          </div>
+          <div className="pe-2">
+            <LightButtonMedium
+              href="/questionsCustom/question3"
+              text="Zu den Einstellungen"
             />
           </div>
         </div>
