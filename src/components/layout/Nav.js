@@ -10,10 +10,10 @@ import { usePathname } from 'next/navigation';
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const navigation = [
-  { name: 'Startseite', href: '/', current: false },
-  { name: 'Projektinfos', href: '/pages/infos', current: false },
-  { name: 'Quellen', href: '/pages/source', current: false },
-  { name: 'Hilfe', href: '/pages/help', current: false }
+  { name: 'Startseite', href: '/' },
+  { name: 'Projektinfos', href: 'https://www.energieregion-peenetal.de/' },
+  { name: 'Quellen', href: '/pages/source' },
+  { name: 'Hilfe', href: '/pages/help' }
 ];
 
 function classNames(...classes) {
@@ -64,6 +64,8 @@ export default function Nav() {
                       <a
                         key={item.name}
                         href={item.href}
+                        target={item.name === 'Projektinfos' ? '_blank' : undefined}
+                        rel={item.name === 'Projektinfos' ? 'noopener noreferrer' : undefined}
                         className={classNames(
                           currentPath === item.href ? 'border-sky-500 text-slate-800' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                           'inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-base font-medium text-slate-800',
@@ -71,6 +73,12 @@ export default function Nav() {
                         aria-current={currentPath === item.href ? 'page' : undefined}
                       >
                         {item.name}
+                        {item.name === 'Projektinfos' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-up-right ml-2" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                            <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                          </svg>
+                        )}
                       </a>
                     ))}
                   </div>
