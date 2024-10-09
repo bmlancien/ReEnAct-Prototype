@@ -1,11 +1,24 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure the component only runs client-side by using useEffect
+  useEffect(() => {
+    setIsClient(true); // This ensures that the component only runs on the client
+  }, []);
+
   // Clamp the value to ensure it's between min and max
   const clampedValue = Math.max(min, Math.min(value, max));
+
+  if (!isClient) {
+    // Don't render the Range component on the server
+    return null;
+  }
 
   return (
     <div className="mb-8 relative">
