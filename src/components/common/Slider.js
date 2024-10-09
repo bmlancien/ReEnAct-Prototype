@@ -1,3 +1,5 @@
+'use client';
+
 import { Range, getTrackBackground } from 'react-range';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
