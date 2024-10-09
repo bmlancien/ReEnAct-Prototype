@@ -62,31 +62,14 @@ export default function Question3() {
                 </div>
                 <div id="slidersWind">
                   <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={112.13}
-                    max={170.5}
-                    step={10}
+                    label="Leistung (MW)"
+                    min={38.72}
+                    max={58.72}
+                    step={2}
                     value={windEnergy}
                     onChange={setWindEnergy}
-                    unit="GWh"
-                  />
-                  <Slider
-                    label="Abstand zu Siedlungen (m) ?"
-                    min={400}
-                    max={1000}
-                    step={1}
-                    value={settlementDistance}
-                    onChange={setSettlementDistance}
-                    unit="m"
-                  />
-                  <Slider
-                    label="Nutzung Landschaftsschutzgebiete (%) ?"
-                    min={4}
-                    max={12}
-                    step={1}
-                    value={landUsage}
-                    onChange={setLandUsage}
-                    unit="%"
+                    unit="MW"
+                    goal={55}
                   />
                 </div>
               </div>
@@ -107,23 +90,25 @@ export default function Question3() {
                 <div id="slidersPV">
                   <h3 className="text-sm pt-2">Freiflächen</h3>
                   <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={13.82}
-                    max={259.73}
+                    label="Leistung (MW)"
+                    min={11.80}
+                    max={221.80}
                     step={10}
                     value={pvProduction}
                     onChange={setPvProduction}
-                    unit="GWh"
+                    unit="MW"
+                    goal={102}
                   />
                   <h3 className="text-sm pt-2">Dachanlagen</h3>
                   <Slider
-                    label="Erzeugte Energie (GWh)"
-                    min={0.73}
-                    max={2.34}
-                    step={0.5}
+                    label="Leistung (MW)"
+                    min={0.62}
+                    max={2.00}
+                    step={0.4}
                     value={pvRoofProduction}
                     onChange={setpvRoofProduction}
-                    unit="GWh"
+                    unit="MW"
+                    goal={1}
                   />
                 </div>
               </div>
