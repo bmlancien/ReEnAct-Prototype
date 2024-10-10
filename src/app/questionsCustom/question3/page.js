@@ -323,9 +323,36 @@ export default function Question3() {
                   <p className="text-lg text-gray-600">2023: <span className="italic text-indigo-700">126,68 GWh</span></p>
                 </div>
                 <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-700">CO<sub>2</sub>-Reduzierung</h3>
+                  <div>
+                    <div className="text-end">82 %</div>
+                    <div className="relative bg-neutral-200 h-4 w-full">
+                      <div className="absolute bg-teal-400 w-[82%] h-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-700 mb-4">Anteil pro Energieträger</h3>
                   <div>
                     <EnergyShare data={data} />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-700">Flächenanteil</h3>
+                  <div>
+                    <div className="text-end">12 %</div>
+                    <div className="relative bg-neutral-200 h-4 w-full">
+                      <div className="absolute bg-teal-400 w-[12%] h-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-700">Autarkiegrad</h3>
+                  <div>
+                    <div className="text-end">100 %</div>
+                    <div className="relative bg-neutral-200 h-4 w-full">
+                      <div className="absolute bg-teal-400 w-[100%] h-full"></div>
+                    </div>
                   </div>
                 </div>
               </div>
