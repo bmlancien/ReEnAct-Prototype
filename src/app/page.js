@@ -21,7 +21,7 @@ export default function Home() {
             <div className="columns-3">
               <HomepageCard
                 src="/images/quiz.png"
-                text="Finden Sie Ihr ideales vorgefetigtes Szenario in wenigen Fragen"
+                text="Finden Sie Ihr ideales vorgefetigtes Szenario"
               >
                 <WhiteButtonMedium
                   href="/questionsDefault/question1"

@@ -128,7 +128,7 @@ export default function Question2() {
             <PrimaryButtonMedium
               href="/questionsDefault/question3"
               icon={ArrowRightIcon}
-              text="Fragen antworten"
+              text="Szenarien sehen"
             />
           </div>
         </div>

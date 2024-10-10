@@ -41,7 +41,7 @@ export default function Breadcrumb({ isShare }) {
           </div>
         )}
         <div className="flex items-center justify-center">
-          <p className="text-sm font-medium">
+          <p className="text-base font-semibold">
             {steps.map((step, index) => (
               index === currentStepIndex ? step.name : ''
             ))}
