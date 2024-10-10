@@ -14,3 +14,12 @@ export default function ScenarioDetails() {
     </div>
   );
 }
+
+// Wrapping the component in Suspense
+export default function ScenarioPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContentPage />
+    </Suspense>
+  );
+}
