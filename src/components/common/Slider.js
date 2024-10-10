@@ -10,10 +10,10 @@ const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
       {/* Slider label and current value */}
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-2">
-          <label className="text-gray-700">{label}</label>
+          <label className="text-sm text-gray-700">{label}</label>
           <InformationCircleIcon className="h-5 w-5 text-gray-500" />
         </div>
-        <span className="text-gray-700">{clampedValue} {unit}</span>
+        <span className="text-sm text-gray-700">{clampedValue} {unit}</span>
       </div>
 
       {/* Range slider */}

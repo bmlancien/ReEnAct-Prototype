@@ -39,7 +39,7 @@ export default function Question3() {
   return (
     <>
       <Breadcrumb />
-      <main className="grow">
+      <main className="grow bg-neutral-50">
         <LayoutSimple>
           <div className="flex justify-between pb-8">
             <span>Bitte nutzen Sie die Einstellungen und Schieberegler, um Ihr zukünftiges Szenario zu erstellen.</span>
@@ -47,7 +47,7 @@ export default function Question3() {
           </div>
           <div className="flex pt-12 justify-between">
             <div className="flex grow max-w-[32rem] pe-8">
-              <div className="me-4 w-full">
+              <div className="me-4 w-full bg-white p-8 rounded-lg">
                 <h1 className="text-lg font-light uppercase pb-4">Erzeugung</h1>
                 <div className="flex items-center pb-4">
                   <span className="me-2">
@@ -256,7 +256,7 @@ export default function Question3() {
               </div>
             </div>
             <div className="flex grow max-w-[32rem] pe-8">
-              <div className="me-4 w-full">
+              <div className="me-4 w-full bg-white p-8 rounded-lg" style={{height: "fit-content"}}>
                 <h1 className="text-lg font-light uppercase pb-4">Verbrauch</h1>
                 <div className="flex items-center pb-4">
                   <span className="me-2">
