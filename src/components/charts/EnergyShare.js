@@ -20,8 +20,8 @@ const EnergyShare = ({ data }) => {
       {
         label: 'Anteil',
         data: data,
-        backgroundColor: '#2dd4bf',
-        borderColor: '#2dd4bf',
+        backgroundColor: '#4f46e5',
+        borderColor: '#4f46e5',
         borderWidth: 1,
         barThickness: 15,
       },

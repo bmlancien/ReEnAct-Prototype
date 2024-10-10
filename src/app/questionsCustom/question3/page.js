@@ -327,7 +327,7 @@ export default function Question3() {
                   <div>
                     <div className="text-end">82 %</div>
                     <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-teal-400 w-[82%] h-full"></div>
+                      <div className="absolute bg-indigo-600 w-[82%] h-full"></div>
                     </div>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ export default function Question3() {
                   <div>
                     <div className="text-end">12 %</div>
                     <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-teal-400 w-[12%] h-full"></div>
+                      <div className="absolute bg-indigo-600 w-[12%] h-full"></div>
                     </div>
                   </div>
                 </div>
@@ -351,7 +351,7 @@ export default function Question3() {
                   <div>
                     <div className="text-end">100 %</div>
                     <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-teal-400 w-[100%] h-full"></div>
+                      <div className="absolute bg-indigo-600 w-[100%] h-full"></div>
                     </div>
                   </div>
                 </div>
