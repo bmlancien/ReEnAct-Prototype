@@ -1,8 +1,9 @@
 "use client";
 
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function ScenarioDetails() {
+function ContentPage() {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
 
