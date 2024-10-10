@@ -1,10 +1,25 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Switch } from '@headlessui/react'
 
-export default function Example() {
-  const [enabled, setEnabled] = useState(true)
+export default function Example({ container }) {
+  const [enabled, setEnabled] = useState(true);
+
+  useEffect(() => { // Only run this effect after the component has mounted
+    if (typeof document !== 'undefined') {
+      const sliderContainer = document.getElementById(container);
+      if (sliderContainer) {
+        if (enabled) {
+          sliderContainer.style.opacity = '1';
+          sliderContainer.style.pointerEvents = 'auto';
+        } else {
+          sliderContainer.style.opacity = '0.4';
+          sliderContainer.style.pointerEvents = 'none';
+        }
+      }
+    }
+  }, [enabled, container]);
 
   return (
     <Switch

@@ -19,10 +19,10 @@ const Slider = dynamic(() => import('../../../components/common/Slider'), {
 });
 
 export default function Question3() {
-  const [windEnergy, setWindEnergy] = useState(120);
-  const [settlementDistance, setSettlementDistance] = useState(700);
+  const [windEnergy, setWindEnergy] = useState(40);
+  const [settlementDistance, setSettlementDistance] = useState(30);
   const [landUsage, setLandUsage] = useState(8);
-  const [pvProduction, setPvProduction] = useState(100);
+  const [pvProduction, setPvProduction] = useState(20);
   const [pvRoofProduction, setpvRoofProduction] = useState(1);
 
   // Calculate total energy production
