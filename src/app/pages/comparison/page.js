@@ -2,9 +2,10 @@
 
 import Header from "../../../components/common/Header";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
+import { LinkIconBlue } from "../../../components/common/Links";
 import { useState } from 'react';
 import { SelectionButtonSmall } from '../../../components/common/Buttons';
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -213,7 +214,15 @@ const ScenarioComparison = () => {
       <Header title="Szenarienvergleich" isShare={true} />
       <main>
         <LayoutSimple>
-          <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigten Szenarien:</h1>
+          <div className="flex justify-between pb-4">
+            <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigten Szenarien:</h1>
+            <LinkIconBlue
+              href="../questionsDefault/question3"
+              text="Alle Szenarien sehen"
+            >
+               <ArrowRightIcon className="h4 w-4" />
+            </LinkIconBlue>
+          </div>
           <div className="flex space-x-4 pb-4 mb-8 border-b">
             {buttons.map((button) => (
               <SelectionButtonSmall
