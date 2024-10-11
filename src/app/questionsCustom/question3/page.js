@@ -80,6 +80,7 @@ export default function Question3() {
                     onChange={setWindEnergy}
                     unit="MW"
                     goal={55}
+                    tooltipMessage="Hier kommt ein Text über Windkraft"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -106,6 +107,7 @@ export default function Question3() {
                     onChange={setPvProduction}
                     unit="MW"
                     goal={102}
+                    tooltipMessage="Hier kommt ein Text über PV"
                   />
                   <h3 className="text-sm pt-2">Dachanlagen</h3>
                   <Slider
@@ -117,6 +119,7 @@ export default function Question3() {
                     onChange={setpvRoofProduction}
                     unit="MW"
                     goal={1}
+                    tooltipMessage="Hier kommt ein Text über PV"
                   />
                   <h3 className="text-sm pt-2">Agri-Photovoltaik</h3>
                   <Slider
@@ -128,6 +131,7 @@ export default function Question3() {
                     onChange={setPvAgriProduction}
                     unit="MW"
                     goal={1}
+                    tooltipMessage="Hier kommt ein Text über PV"
                   />
                   <h3 className="text-sm pt-2">Moor-Photovoltaik</h3>
                   <Slider
@@ -139,6 +143,7 @@ export default function Question3() {
                     onChange={setPvMoorProduction}
                     unit="MW"
                     goal={30}
+                    tooltipMessage="Hier kommt ein Text über PV"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -172,6 +177,7 @@ export default function Question3() {
                     onChange={setBiomass}
                     unit="MW"
                     goal={4}
+                    tooltipMessage="Hier kommt ein Text über Moorbewirtschaftung"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -197,6 +203,7 @@ export default function Question3() {
                     onChange={setBattery}
                     unit="MWh"
                     goal={40}
+                    tooltipMessage="Hier kommt ein Text über Batteriespeicher"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -226,6 +233,7 @@ export default function Question3() {
                     onChange={setHeat}
                     unit="%"
                     goal={50}
+                    tooltipMessage="Hier kommt ein Text über Wärmespeicher"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -251,6 +259,7 @@ export default function Question3() {
                     onChange={setH2}
                     unit="MW"
                     goal={4.75}
+                    tooltipMessage="Hier kommt ein Text über H2-Erzeugung"
                   />
                 </div>
               </div>
@@ -281,6 +290,7 @@ export default function Question3() {
                     onChange={setElectricityConsumption}
                     unit="%"
                     goal={75}
+                    tooltipMessage="Hier kommt ein Text über Stromverbrauch"
                   />
                 </div>
                 <div className="flex items-center pt-8 pb-4">
@@ -310,6 +320,7 @@ export default function Question3() {
                     onChange={setHeatConsumption}
                     unit="%"
                     goal={75}
+                    tooltipMessage="Hier kommt ein Text über Wärmeverbrauch"
                   />
                 </div>
               </div>

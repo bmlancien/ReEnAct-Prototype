@@ -1,7 +1,7 @@
 import { Range, getTrackBackground } from 'react-range';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import Tooltips from './Tooltips';
 
-const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
+const Slider = ({ label, min, max, step, value, onChange, unit, goal, tooltipMessage }) => {
   // Clamp the value to ensure it's between min and max
   const clampedValue = Math.max(min, Math.min(value, max));
 
@@ -11,7 +11,9 @@ const Slider = ({ label, min, max, step, value, onChange, unit, goal }) => {
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-2">
           <label className="text-sm text-gray-700">{label}</label>
-          <InformationCircleIcon className="h-5 w-5 text-gray-500" />
+          <Tooltips 
+            message={tooltipMessage}
+          />
         </div>
         <span className="text-sm text-gray-700">{clampedValue} {unit}</span>
       </div>
