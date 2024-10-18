@@ -43,7 +43,8 @@ const buttons = [
   { id: 7, text: "Hohe CO2-Preise" },
   { id: 8, text: "Suffizienz" },
   { id: 9, text: "Autarkie" },
-  { id: 10, text: "Business as usual" }
+  { id: 10, text: "Weiter wie bisher" },
+  { id: 11, text: "Mein Szenario" }
 ];
 
 const data = [
@@ -56,7 +57,8 @@ const data = [
   { id: 7, values: [230.2, 9.30, 35.30, 27.50, 20.90, 14.30, 6.90, 180, 3.90, 5.00, 2.70] },
   { id: 8, values: [192.4, 11.80, 33.10, 29.60, 25.20, 21.50, 8.60, 240, 4.60, 5.90, 2.80] },
   { id: 9, values: [221.5, 10.50, 28.60, 24.70, 28.30, 20.60, 6.30, 220, 4.40, 4.70, 1.50] },
-  { id: 10, values: [180.7, 6.90, 10.90, 40.20, 31.70, 18.90, 7.10, 260, 5.50, 6.20, 3.60] }
+  { id: 10, values: [180.7, 6.90, 10.90, 40.20, 31.70, 18.90, 7.10, 260, 5.50, 6.20, 3.60] },
+  { id: 11, values: [200.2, 8.3, 12.14, 40.20, 31.70, 19.90, 8.10, 260, 3.50, 5.20, 3.60] }
 ];
 
 const ScenarioComparison = () => {
@@ -223,7 +225,7 @@ const ScenarioComparison = () => {
                <ArrowRightIcon className="h4 w-4" />
             </LinkIconBlue>
           </div>
-          <div className="flex space-x-4 pb-4 mb-8 border-b">
+          <div className="flex flex-wrap pb-4 mb-8 border-b">
             {buttons.map((button) => (
               <SelectionButtonSmall
                 key={button.id}

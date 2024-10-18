@@ -147,7 +147,7 @@ export const OutlineWhiteButtonSmall = ({ href, icon: Icon, text }) => (
 export const SelectionButtonSmall = ({ icon: Icon, text, selected, onClick }) => (
   <button
     onClick={onClick}
-    className={`block rounded-full border-2 px-2 text-sm text-center font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800 ${
+    className={`block rounded-full border-2 px-2 mb-4 me-4 text-sm text-center font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800 ${
       selected ? "border-sky-800 bg-sky-800 text-white hover:bg-sky-700" : "border-slate-100 bg-slate-100 text-slate-800 hover:bg-slate-200"
     }`}
   >
