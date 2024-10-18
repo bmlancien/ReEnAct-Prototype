@@ -215,7 +215,7 @@ const ScenarioComparison = () => {
       <main>
         <LayoutSimple>
           <div className="flex justify-between pb-4">
-            <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgeftigten Szenarien:</h1>
+            <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgefertigten Szenarien:</h1>
             <LinkIconBlue
               href="../questionsDefault/question3"
               text="Alle Szenarien sehen"

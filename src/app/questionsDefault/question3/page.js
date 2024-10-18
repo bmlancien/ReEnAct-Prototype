@@ -15,7 +15,7 @@ export default function Question3() {
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pt-12 pb-8">
-            <p className="text-neutral-600">Wählen Sie ein vorgeftigtes Szenario aus oder erstellen Sie Ihr eigenes Szenario</p>
+            <p className="text-neutral-600">Wählen Sie ein vorgefertigtes Szenario aus oder erstellen Sie Ihr eigenes Szenario</p>
             <div className="absolute top-0 right-0">
               <Goal />
             </div>
