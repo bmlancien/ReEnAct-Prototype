@@ -29,21 +29,21 @@ export default function Home() {
                 />
               </HomepageCard>
               <HomepageCard
-                src="/images/switch.png"
-                text="Gestalten Sie Ihr eigenes, individuelles Szenario"
-              >
-                <WhiteButtonMedium
-                  href="/questionsCustom/question1"
-                  text="Los geht's"
-                />
-              </HomepageCard>
-              <HomepageCard
                 src="/images/compare.png"
                 text="Vergleichen Sie verschiedene vorgefertigte Szenarien"
               >
-                <OutlineWhiteButtonMedium
+                <WhiteButtonMedium
                   href="/pages/comparison"
                   text="Vergleichen"
+                />
+              </HomepageCard>
+              <HomepageCard
+                src="/images/switch.png"
+                text="Gestalten Sie Ihr eigenes, individuelles Szenario"
+              >
+                <OutlineWhiteButtonMedium
+                  href="/questionsCustom/question1"
+                  text="Los geht's"
                 />
               </HomepageCard>
             </div>
