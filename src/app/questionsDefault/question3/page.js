@@ -4,6 +4,7 @@ import BottomNav from "../../../components/common/BottomNav";
 import BreadcrumbDefault from "../../../components/common/BreadcrumbDefault";
 import Goal from "../../../components/common/Goal";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
+import { LinkIconBlue } from "../../../components/common/Links";
 import ScenarioCard from "../../../components/common/ScenarioCard";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
@@ -15,9 +16,17 @@ export default function Question3() {
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pt-12 pb-8">
+            <div className="absolute top-0 right-0">
+              <LinkIconBlue
+                href="/pages/comparison"
+                text="Mit anderen Szenarien vergleichen"
+              >
+                <ArrowRightIcon className="h4 w-4"/>
+              </LinkIconBlue>
+            </div>
             <p className="text-neutral-600">Wählen Sie ein vorgefertigtes Szenario aus oder erstellen Sie Ihr eigenes Szenario</p>
             <div className="absolute top-0 right-0">
-              <Goal />
+              {/* <Goal /> */}
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-4 items-stretch pt-8">
