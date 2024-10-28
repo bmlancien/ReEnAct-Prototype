@@ -5,7 +5,7 @@ import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/comm
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
 
-export default function Question4() {
+export default function ScenarioDetail() {
   return (
     <>
       <Breadcrumb
@@ -106,7 +106,7 @@ export default function Question4() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsCustom/question3"
+              href="/questionsDefault/createScenario"
               icon={ArrowLeftIcon}
               text="Zurück"
             />

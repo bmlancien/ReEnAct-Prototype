@@ -7,7 +7,7 @@ import Image from "next/image";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon, ViewfinderCircleIcon } from '@heroicons/react/24/outline';
 
-export default function Question2() {
+export default function RegionToday() {
   return (
     <>
       <BreadcrumbDefault />
@@ -119,14 +119,14 @@ export default function Question2() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsDefault/question1"
+              href="/questionsDefault/challenges"
               icon={ArrowLeftIcon}
               text="Zurück"
             />
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questionsDefault/question3"
+              href="/questionsDefault/scenariosOverview"
               icon={ArrowRightIcon}
               text="Szenarien sehen"
             />

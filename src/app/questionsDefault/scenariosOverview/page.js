@@ -9,7 +9,7 @@ import ScenarioCard from "../../../components/common/ScenarioCard";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export default function Question3() {
+export default function ScenariosOverview() {
   return (
     <>
       <BreadcrumbDefault />
@@ -139,7 +139,7 @@ export default function Question3() {
               text="Es erfolgt keine wesentliche Änderung, und die aktuelle Energiepolitik wird fortgesetzt."
             />
             <ScenarioCard
-              href="/questionsCustom/question3"
+              href="/questionsDefault/createScenario"
               icon={
                 <path fill="#075985" d="m79.301 20.699c-16.199-16.199-42.5-16.199-58.699 0-16.199 16.199-16.199 42.5 0 58.699 16.199 16.199 42.5 16.199 58.699 0 16.199-16.199 16.199-42.598 0-58.699zm-10.5 31.699c-0.60156 0.60156-1.5 1-2.3984 1h-13v13c0 0.89844-0.39844 1.8008-1 2.3984-0.60156 0.60156-1.5 1-2.3984 1-1.8984 0-3.3984-1.5-3.3984-3.3984v-13h-13c-1.8984 0-3.3984-1.5-3.3984-3.3984s1.5-3.3984 3.3984-3.3984h13v-13c0-1.8984 1.5-3.3984 3.3984-3.3984 1.8984 0 3.3984 1.5 3.3984 3.3984v13h13c1.8984 0 3.3984 1.5 3.3984 3.3984-0.10156 0.89844-0.40234 1.8008-1 2.3984z"/>
               }
@@ -155,7 +155,7 @@ export default function Question3() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsDefault/question2"
+              href="/questionsDefault/regionToday"
               icon={ArrowLeftIcon}
               text="Zurück"
             />

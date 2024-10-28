@@ -36,7 +36,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-8">
             <div className="w-[16rem] pt-8 pb-24">
               <BlackButtonMedium
-                href="/questionsDefault/question1"
+                href="/questionsDefault/challenges"
                 text="Szenario finden"
               />
             </div>
@@ -44,15 +44,15 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-8">
             <div className="columns-3">
               <SecondaryButtonMedium
-                href="/questionsDefault/question3"
+                href="/questionsDefault/scenariosOverview"
                 text="Vorgefertigtes Szenario auswählen"
               />
               <SecondaryButtonMedium
                 href="/pages/comparison"
-                text="Vorgefertigtes Szenario vergleichen"
+                text="Vorgefertigte Szenarien vergleichen"
               />
               <SecondaryButtonMedium
-                href="/questionsCustom/question3"
+                href="/questionsDefault/createScenario"
                 text="Eigenes Szenario erstellen"
               />
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
               <div className="w-[15rem] pt-8">
                 <PrimaryButtonMedium
-                  href="/questionsDefault/question2"
+                  href="/questionsDefault/regionToday"
                   text="Details sehen"
                 />
               </div>

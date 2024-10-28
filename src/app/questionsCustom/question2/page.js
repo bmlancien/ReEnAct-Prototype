@@ -126,7 +126,7 @@ export default function Question2() {
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questionsCustom/question3"
+              href="/questionsDefault/createScenario"
               icon={ArrowRightIcon}
               text="Szenario erstellen"
             />

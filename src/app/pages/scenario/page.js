@@ -272,7 +272,7 @@ function ContentPage() {
     <LayoutSimple>
       <div className="relative flex justify-center pb-8">
         <div className="absolute top-0 left-0">
-          <LinkIconBlue href="/questionsDefault/question3" text="Alle Szenarien sehen">
+          <LinkIconBlue href="/questionsDefault/scenariosOverview" text="Alle Szenarien sehen">
             <ArrowLeftIcon className="h4 w-4"/>
           </LinkIconBlue>
         </div>

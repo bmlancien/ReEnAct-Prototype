@@ -18,7 +18,7 @@ const Slider = dynamic(() => import('../../../components/common/Slider'), {
   ssr: false,
 });
 
-export default function Question3() {
+export default function CreateScenario() {
   const [windEnergy, setWindEnergy] = useState(40);
   const [pvProduction, setPvProduction] = useState(60);
   const [pvRoofProduction, setpvRoofProduction] = useState(0.75);
@@ -388,7 +388,7 @@ export default function Question3() {
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questionsCustom/question4"
+              href="/questionsDefault/scenarioDetail"
               icon={ArrowRightIcon}
               text="Ergebnisse sehen"
             />

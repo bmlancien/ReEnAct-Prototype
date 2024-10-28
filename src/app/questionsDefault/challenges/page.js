@@ -4,7 +4,7 @@ import LayoutCentered from "../../../components/layout/LayoutCentered";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export default function Question1() {
+export default function Challenges() {
   return (
     <>
       <BreadcrumbDefault />
@@ -27,14 +27,14 @@ export default function Question1() {
           </div>
           <div className="pe-2">
             <PrimaryButtonMedium
-              href="/questionsDefault/question2"
+              href="/questionsDefault/regionToday"
               icon={ArrowRightIcon}
               text="Details zur Region sehen"
             />
           </div>
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsDefault/question3"
+              href="/questionsDefault/scenariosOverview"
               text="Szenarien sehen"
             />
           </div>

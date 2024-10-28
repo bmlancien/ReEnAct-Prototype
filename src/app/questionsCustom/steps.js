@@ -1,8 +1,8 @@
 const steps = [
   { name: 'Herausforderungen', href: '/questionsCustom/question1', status: 'current' },
   { name: 'Die Region heute', href: '/questionsCustom/question2', status: 'upcoming' },
-  { name: 'Eigenes Szenario erstellen', href: '/questionsCustom/question3', status: 'upcoming' },
-  { name: 'Mein Szenario', href: '/questionsCustom/question4', status: 'upcoming' },
+  { name: 'Eigenes Szenario erstellen', href: '/questionsDefault/createScenario', status: 'upcoming' },
+  { name: 'Mein Szenario', href: '/questionsDefault/createScenario', status: 'upcoming' },
 ];
 
 export default steps;

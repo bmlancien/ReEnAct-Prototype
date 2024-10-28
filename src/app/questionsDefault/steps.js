@@ -1,7 +1,7 @@
 const steps = [
-  { name: 'Herausforderungen', href: '/questionsDefault/question1', status: 'current' },
-  { name: 'Die Region heute', href: '/questionsDefault/question2', status: 'upcoming' },
-  { name: 'Szenarienübersicht', href: '/questionsDefault/question3', status: 'upcoming' },
+  { name: 'Herausforderungen', href: '/questionsDefault/challenges', status: 'current' },
+  { name: 'Die Region heute', href: '/questionsDefault/regionToday', status: 'upcoming' },
+  { name: 'Szenarienübersicht', href: '/questionsDefault/scenariosOverview', status: 'upcoming' },
   { name: 'Zukunftsszenario', href: '/questionsDefault/question6', status: 'upcoming' },
 ];
 

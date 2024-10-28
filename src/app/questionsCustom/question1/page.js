@@ -34,7 +34,7 @@ export default function Question1() {
           </div>
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsCustom/question3"
+              href="/questionsDefault/createScenario"
               text="Zu den Einstellungen"
             />
           </div>
