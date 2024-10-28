@@ -328,6 +328,12 @@ export default function Question3() {
             <div className="flex justify-end" style={{height: "fit-content"}}>
               <div className="w-full max-w-4xl bg-white border rounded-lg shadow-md">
                 <div className="p-6 bg-gray-100 border-b">
+                  <h2 className="text-xl font-medium text-gray-700">Energieverbrauch 2040</h2>
+                  {/* Display the total energy production */}
+                  <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>
+                  <p className="text-lg text-gray-600">2023: <span className="italic text-indigo-700">126,68 GWh</span></p>
+                </div>
+                <div className="p-6 bg-gray-100 border-b">
                   <h2 className="text-xl font-medium text-gray-700">Energieproduktion 2040</h2>
                   {/* Display the total energy production */}
                   <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>

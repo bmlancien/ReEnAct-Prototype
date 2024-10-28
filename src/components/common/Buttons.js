@@ -36,6 +36,42 @@ export const WhiteButtonMedium = ({ href, icon: Icon, text }) => (
   </Link>
 );
 
+export const BlackButtonMedium = ({ href, icon: Icon, text }) => (
+  <Link
+    href={href}
+    className="block rounded-full min-w-[100px] bg-slate-800 px-3 py-4 text-lg text-center font-semibold text-white shadow-sm hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-300"
+  >
+    <span className="flex justify-center items-center">
+      {Icon && (
+        <span className="me-2">
+          <Icon 
+            className="h-4 w-4"
+          />
+        </span>
+      )}
+      { text }
+    </span>
+  </Link>
+);
+
+export const SecondaryButtonMedium = ({ href, icon: Icon, text }) => (
+  <Link
+    href={href}
+    className="block rounded-full min-w-[100px] bg-sky-500 px-2.5 py-1.5 text-base text-center text-slate-800 shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-300"
+  >
+    <span className="flex justify-center items-center">
+      {Icon && (
+        <span className="me-2">
+          <Icon 
+            className="h-4 w-4"
+          />
+        </span>
+      )}
+      { text }
+    </span>
+  </Link>
+);
+
 export const LightButtonMedium = ({ href, icon: Icon, text }) => (
   <Link
     href={href}

@@ -1,4 +1,4 @@
-import { WhiteButtonMedium,  OutlineWhiteButtonMedium } from "../components/common/Buttons";
+import { SecondaryButtonMedium, BlackButtonMedium } from "../components/common/Buttons";
 import HomepageCard from "../components/common/HomepageCard";
 import HomepageSecondaryCards from "../components/common/HomepageSecondaryCards";
 import Image from "next/image";
@@ -15,39 +15,42 @@ export default function Home() {
         <div className="bg-sky-400 py-20">
           <div className="mx-auto max-w-7xl px-8">
             <h1
-              className="text-3xl font-bold text-center pb-12">
+              className="text-4xl font-bold pb-8">
                 Welches Zukunftsszenario passt zu Peenetal/Loitz?
             </h1>
+            <p
+              className="text-2xl max-w-[48rem] pb-4"
+            >
+              Diese App hilft der Region, die Energiewende voranzutreiben und die Klimaziele Deutschlands zu erreichen.
+            </p>
+            <p
+              className="text-2xl max-w-[48rem]"
+            >
+              Visualisieren und vergleichen Sie vorgefertigte Szenarien oder erstellen Sie Ihr eigenes, um die nachhaltige Zukunft der Region mitzugestalten.
+            </p>
+          </div>
+          <div className="mx-auto max-w-7xl px-8">
+            <div className="w-[16rem] pt-8 pb-24">
+              <BlackButtonMedium
+                href="/questionsDefault/question1"
+                text="Los geht's"
+              />
+            </div>
           </div>
           <div className="mx-auto max-w-7xl px-8">
             <div className="columns-3">
-              <HomepageCard
-                src="/images/quiz.png"
-                text="Finden Sie Ihr ideales vorgefertigtes Szenario"
-              >
-                <WhiteButtonMedium
-                  href="/questionsDefault/question1"
-                  text="Los geht's"
-                />
-              </HomepageCard>
-              <HomepageCard
-                src="/images/compare.png"
-                text="Vergleichen Sie verschiedene vorgefertigte Szenarien"
-              >
-                <WhiteButtonMedium
-                  href="/pages/comparison"
-                  text="Vergleichen"
-                />
-              </HomepageCard>
-              <HomepageCard
-                src="/images/switch.png"
-                text="Gestalten Sie Ihr eigenes, individuelles Szenario"
-              >
-                <OutlineWhiteButtonMedium
-                  href="/questionsCustom/question1"
-                  text="Los geht's"
-                />
-              </HomepageCard>
+              <SecondaryButtonMedium
+                href="/questionsDefault/question3"
+                text="Vorgefertigtes Szenario auswählen"
+              />
+              <SecondaryButtonMedium
+                href="/pages/comparison"
+                text="Vorgefertigtes Szenario vergleichen"
+              />
+              <SecondaryButtonMedium
+                href="/questionsCustom/question3"
+                text="Eigenes Szenario erstellen"
+              />
             </div>
           </div>
         </div>
