@@ -41,7 +41,7 @@ export default function CreateScenario() {
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
         <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span className="pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
@@ -51,7 +51,7 @@ export default function CreateScenario() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/challenges"
             >
@@ -61,7 +61,7 @@ export default function CreateScenario() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/regionToday"
             >
@@ -71,12 +71,18 @@ export default function CreateScenario() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/scenariosOverview"
             >
               Szenarienübersicht
             </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span>
+            Szenario erstellen
           </span>
         </div>
       </nav>
@@ -422,9 +428,9 @@ export default function CreateScenario() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsCustom/question2"
+              href="/questionsDefault/scenariosOverview"
               icon={ArrowLeftIcon}
-              text="Zurück"
+              text="Szenarienübersicht"
             />
           </div>
           <div className="pe-2">

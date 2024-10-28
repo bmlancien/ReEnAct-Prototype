@@ -11,7 +11,7 @@ export default function ScenarioDetail() {
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
         <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span className="pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
@@ -21,7 +21,7 @@ export default function ScenarioDetail() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/challenges"
             >
@@ -31,7 +31,7 @@ export default function ScenarioDetail() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/regionToday"
             >
@@ -41,27 +41,31 @@ export default function ScenarioDetail() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/scenariosOverview"
             >
               Szenarienübersicht
             </Link>
           </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span>
+            Szenario Details
+          </span>
         </div>
       </nav>
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pb-8">
-            <h1 className="text-xl font-semibold">Mein Zukunftszenario</h1>
-            <div className="absolute top-0 right-0">
-              <LinkIconBlue
-                href="/pages/comparison"
-                text="Mit anderen Szenarien vergleichen"
-              >
-                <ArrowRightIcon className="h4 w-4"/>
-              </LinkIconBlue>
-            </div>
+            <h1 className="text-xl font-semibold pe-4">Mein Zukunftszenario</h1>
+            <LinkIconBlue
+              href="/questionsDefault/createScenario"
+              text="Ändern"
+            >
+              <ArrowRightIcon className="h4 w-4"/>
+            </LinkIconBlue>
           </div>
           <div className="flex flex-wrap -mx-2 mb-10">
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
@@ -145,15 +149,15 @@ export default function ScenarioDetail() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsDefault/createScenario"
+              href="/questionsDefault/scenariosOverview"
               icon={ArrowLeftIcon}
-              text="Zurück"
+              text="Szenarienübersicht"
             />
           </div>
-          <div className="pe-2 invisible">
+          <div className="pe-2">
             <PrimaryButtonMedium
-              href=""
-              text=""
+              href="/pages/comparison"
+              text="Szenarienvergleich"
             />
           </div>
         </div>

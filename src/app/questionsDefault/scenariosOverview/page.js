@@ -15,7 +15,7 @@ export default function ScenariosOverview() {
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
         <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span className="pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
@@ -25,7 +25,7 @@ export default function ScenariosOverview() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/challenges"
             >
@@ -35,26 +35,24 @@ export default function ScenariosOverview() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/regionToday"
             >
               Region heute
             </Link>
           </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span>
+            Szenarienübersicht
+          </span>
         </div>
       </nav>
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pt-12 pb-8">
-            <div className="absolute top-0 right-0">
-              <LinkIconBlue
-                href="/pages/comparison"
-                text="Mit anderen Szenarien vergleichen"
-              >
-                <ArrowRightIcon className="h4 w-4"/>
-              </LinkIconBlue>
-            </div>
             <p className="text-neutral-600">Wählen Sie ein vorgefertigtes Szenario aus oder erstellen Sie Ihr eigenes Szenario</p>
             <div className="absolute top-0 right-0">
               {/* <Goal /> */}
@@ -188,7 +186,14 @@ export default function ScenariosOverview() {
             <LightButtonMedium
               href="/questionsDefault/regionToday"
               icon={ArrowLeftIcon}
-              text="Zurück"
+              text="Region heute"
+            />
+          </div>
+          <div className="pe-2">
+            <PrimaryButtonMedium
+              href="/pages/comparison"
+              icon={ArrowRightIcon}
+              text="Szenarien vergleichen"
             />
           </div>
         </div>

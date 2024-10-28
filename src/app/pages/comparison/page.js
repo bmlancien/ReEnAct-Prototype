@@ -5,8 +5,10 @@ import LayoutSimple from "../../../components/layout/LayoutSimple";
 import { LinkIconBlue } from "../../../components/common/Links";
 import { useState } from 'react';
 import { SelectionButtonSmall } from '../../../components/common/Buttons';
-import { ArrowUpRightIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ArrowLeftIcon, ArrowUpRightIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { Bar } from 'react-chartjs-2';
+import BottomNav from "../../../components/common/BottomNav";
 import {
   Chart as ChartJS,
   BarElement,
@@ -216,7 +218,7 @@ const ScenarioComparison = () => {
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
         <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span className="pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
@@ -226,7 +228,7 @@ const ScenarioComparison = () => {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/challenges"
             >
@@ -236,7 +238,7 @@ const ScenarioComparison = () => {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/regionToday"
             >
@@ -246,12 +248,18 @@ const ScenarioComparison = () => {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/scenariosOverview"
             >
               Szenarienübersicht
             </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="">
+            Szenarienvergleich
           </span>
         </div>
       </nav>
@@ -259,12 +267,6 @@ const ScenarioComparison = () => {
         <LayoutSimple>
           <div className="flex justify-between pb-4">
             <h1 className="pb-4">Vergleichen Sie zwischen 10 vorgefertigten Szenarien:</h1>
-            <LinkIconBlue
-              href="../questionsDefault/scenariosOverview"
-              text="Alle Szenarien sehen"
-            >
-               <ArrowRightIcon className="h4 w-4" />
-            </LinkIconBlue>
           </div>
           <div className="flex flex-wrap pb-4 mb-8 border-b">
             {buttons.map((button) => (
@@ -357,6 +359,23 @@ const ScenarioComparison = () => {
           </div>
         </LayoutSimple>
       </main>
+      <BottomNav>
+        <div className="flex">
+          <div className="pe-2">
+            <LightButtonMedium
+              href="/questionsDefault/scenariosOverview"
+              icon={ArrowLeftIcon}
+              text="Szenarienübersicht"
+            />
+          </div>
+          <div className="pe-2">
+            <LightButtonMedium
+              href="/questionsDefault/createScenario"
+              text="Szenario erstellen"
+            />
+          </div>
+        </div>
+      </BottomNav>
     </>
   );
 }

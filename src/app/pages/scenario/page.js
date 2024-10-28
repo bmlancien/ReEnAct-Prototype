@@ -3,6 +3,8 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import LayoutSimple from "../../../components/layout/LayoutSimple";
+import BottomNav from "../../../components/common/BottomNav";
+import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
 import Link from 'next/link';
@@ -273,7 +275,7 @@ function ContentPage() {
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
         <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span className="pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
@@ -283,7 +285,7 @@ function ContentPage() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/challenges"
             >
@@ -293,7 +295,7 @@ function ContentPage() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/regionToday"
             >
@@ -303,28 +305,27 @@ function ContentPage() {
           <ChevronRightIcon
             className="w-6 h-6 ms-2"
           />
-          <span className="ps-2 pe-2">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/questionsDefault/scenariosOverview"
             >
               Szenarienübersicht
             </Link>
           </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span>
+            Szenario Details
+          </span>
         </div>
       </nav>
       <LayoutSimple>
         <div className="relative flex justify-center pb-8">
-          <div className="absolute top-0 left-0">
-            <LinkIconBlue href="/questionsDefault/scenariosOverview" text="Alle Szenarien sehen">
-              <ArrowLeftIcon className="h4 w-4"/>
-            </LinkIconBlue>
-          </div>
-          <h1 className="text-xl font-semibold">{scenario.title}</h1>
-          <div className="absolute top-0 right-0">
-            <LinkIconBlue href="/pages/comparison" text="Mit anderen Szenarien vergleichen">
-              <ArrowRightIcon className="h4 w-4"/>
-            </LinkIconBlue>
-          </div>
+          <h1 className="text-xl font-semibold pe-4">{scenario.title}</h1>
+          <LinkIconBlue href="/questionsDefault/scenariosOverview" text="Szenario ändern">
+            <ArrowRightIcon className="h4 w-4"/>
+          </LinkIconBlue>
         </div>
 
         <div className="flex flex-wrap -mx-2 mb-10">
@@ -370,6 +371,24 @@ function ContentPage() {
           </div>
         </div>
       </LayoutSimple>
+      <BottomNav>
+        <div className="flex">
+          <div className="pe-2">
+            <LightButtonMedium
+              href="/questionsDefault/scenariosOverview"
+              icon={ArrowLeftIcon}
+              text="Szenarienübersicht"
+            />
+          </div>
+          <div className="pe-2">
+            <PrimaryButtonMedium
+              href="/pages/comparison"
+              icon={ArrowRightIcon}
+              text="Szenarien vergleichen"
+            />
+          </div>
+        </div>
+      </BottomNav>
     </>
   );
 }

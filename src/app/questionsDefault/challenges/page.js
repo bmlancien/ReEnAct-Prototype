@@ -2,20 +2,26 @@ import BottomNav from "../../../components/common/BottomNav";
 import BreadcrumbDefault from "../../../components/common/BreadcrumbDefault";
 import LayoutCentered from "../../../components/layout/LayoutCentered";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import Link from "next/link";
 
 export default function Challenges() {
   return (
     <>
       <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
-        <div className="relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
-          <span>
+        <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span className="text-sky-800 font-semibold">
             <Link
               href="/"
             >
               Startseite
             </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span>
+            Herausforderungen und Chancen
           </span>
         </div>
       </nav>
@@ -40,14 +46,11 @@ export default function Challenges() {
             <PrimaryButtonMedium
               href="/questionsDefault/regionToday"
               icon={ArrowRightIcon}
-              text="Details zur Region sehen"
+              text="Region heute"
             />
           </div>
           <div className="pe-2">
-            <LightButtonMedium
-              href="/questionsDefault/scenariosOverview"
-              text="Szenarien sehen"
-            />
+
           </div>
         </div>
       </BottomNav>
