@@ -3,11 +3,22 @@ import BreadcrumbDefault from "../../../components/common/BreadcrumbDefault";
 import LayoutCentered from "../../../components/layout/LayoutCentered";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from "next/link";
 
 export default function Challenges() {
   return (
     <>
-      <BreadcrumbDefault />
+      <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
+        <div className="relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span>
+            <Link
+              href="/"
+            >
+              Startseite
+            </Link>
+          </span>
+        </div>
+      </nav>
       <main className="grow">
         <LayoutCentered>
           <div className="flex flex-col flex-wrap justify-center content-center align-center">

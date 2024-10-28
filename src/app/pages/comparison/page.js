@@ -5,7 +5,7 @@ import LayoutSimple from "../../../components/layout/LayoutSimple";
 import { LinkIconBlue } from "../../../components/common/Links";
 import { useState } from 'react';
 import { SelectionButtonSmall } from '../../../components/common/Buttons';
-import { ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
+import { ArrowUpRightIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -17,6 +17,7 @@ import {
   Title
 } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import Link from "next/link";
 
 ChartJS.register(
   BarElement,
@@ -213,7 +214,47 @@ const ScenarioComparison = () => {
 
   return (
     <>
-      <Header title="Szenarienvergleich" isShare={true} />
+      <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
+        <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span className="pe-2">
+            <Link
+              href="/"
+            >
+              Startseite
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/challenges"
+            >
+              Herausforderungen und Chancen
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/regionToday"
+            >
+              Region heute
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/scenariosOverview"
+            >
+              Szenarienübersicht
+            </Link>
+          </span>
+        </div>
+      </nav>
       <main>
         <LayoutSimple>
           <div className="flex justify-between pb-4">

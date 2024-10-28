@@ -4,13 +4,34 @@ import EnergyShareStatic from "../../../components/charts/EnergyShareStatic";
 import Goal from "../../../components/common/Goal";
 import LayoutMap from "../../../components/layout/LayoutMap";
 import Image from "next/image";
+import Link from "next/link";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
-import { ArrowLeftIcon, ArrowRightIcon, ViewfinderCircleIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon, ViewfinderCircleIcon } from '@heroicons/react/24/outline';
 
 export default function RegionToday() {
   return (
     <>
-      <BreadcrumbDefault />
+      <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
+        <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span className="pe-2">
+            <Link
+              href="/"
+            >
+              Startseite
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/challenges"
+            >
+              Herausforderungen und Chancen
+            </Link>
+          </span>
+        </div>
+      </nav>
       <LayoutMap>
         <div className="flex-1 overflow-auto w-full border-r border-slate-200">
           <div className="pt-12 pe-12">

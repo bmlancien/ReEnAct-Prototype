@@ -1,16 +1,55 @@
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
+import Link from "next/link";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
 
 export default function ScenarioDetail() {
   return (
     <>
-      <Breadcrumb
-        isShare={true}
-      />
+      <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
+        <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span className="pe-2">
+            <Link
+              href="/"
+            >
+              Startseite
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/challenges"
+            >
+              Herausforderungen und Chancen
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/regionToday"
+            >
+              Region heute
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="ps-2 pe-2">
+            <Link
+              href="/questionsDefault/scenariosOverview"
+            >
+              Szenarienübersicht
+            </Link>
+          </span>
+        </div>
+      </nav>
       <main className="grow">
         <LayoutSimple>
           <div className="relative flex justify-center pb-8">
