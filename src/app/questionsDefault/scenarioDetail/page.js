@@ -60,12 +60,6 @@ export default function ScenarioDetail() {
         <LayoutSimple>
           <div className="relative flex justify-center pb-8">
             <h1 className="text-xl font-semibold pe-4">Mein Zukunftszenario</h1>
-            <LinkIconBlue
-              href="/questionsDefault/createScenario"
-              text="Ändern"
-            >
-              <ArrowRightIcon className="h4 w-4"/>
-            </LinkIconBlue>
           </div>
           <div className="flex flex-wrap -mx-2 mb-10">
             <div className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
@@ -149,9 +143,9 @@ export default function ScenarioDetail() {
         <div className="flex">
           <div className="pe-2">
             <LightButtonMedium
-              href="/questionsDefault/scenariosOverview"
+              href="/questionsDefault/createScenario"
               icon={ArrowLeftIcon}
-              text="Szenarienübersicht"
+              text="Szenario ändern"
             />
           </div>
           <div className="pe-2">

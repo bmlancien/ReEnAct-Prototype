@@ -323,9 +323,6 @@ function ContentPage() {
       <LayoutSimple>
         <div className="relative flex justify-center pb-8">
           <h1 className="text-xl font-semibold pe-4">{scenario.title}</h1>
-          <LinkIconBlue href="/questionsDefault/scenariosOverview" text="Szenario ändern">
-            <ArrowRightIcon className="h4 w-4"/>
-          </LinkIconBlue>
         </div>
 
         <div className="flex flex-wrap -mx-2 mb-10">

@@ -155,7 +155,7 @@ export default function RegionToday() {
             <PrimaryButtonMedium
               href="/questionsDefault/scenariosOverview"
               icon={ArrowRightIcon}
-              text="Szenarienübsersicht"
+              text="Szenarienübersicht"
             />
           </div>
         </div>

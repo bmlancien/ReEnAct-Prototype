@@ -155,11 +155,17 @@ export default function Home() {
             <div className="flex gap-x-12" id="energy-transition">
               <div>
                 <p className="max-w-xl mb-8 p-8 bg-slate-100 font-semibold mt-20">Hauptziel ist es, bis 2040 eine CO2-Emission von 0% zu erreichen. Gemeinsam können wir unsere Region zu einem Vorreiter der Energiezukunft machen und damit auch einen wichtigen Beitrag zu den nationalen Energiezielen leisten.</p>
-              </div> 
+              </div>
               <div>
                 <h1 className="text-2xl font-semibold pb-8">Chancen der Energiewende</h1>
                 <p className="max-w-xl mb-8">Die Energiewende bringt Herausforderungen mit sich. Veränderungen in der Infrastruktur, wirtschaftliche Auswirkungen und Anpassungen im Lebensstil können Unsicherheiten auslösen. Eine nachhaltige und gerechte Lösung stellt sicher, dass der Übergang zu sauberer Energie der gesamten Gemeinschaft zugutekommt.</p>
                 <p className="max-w-xl mb-8">Es gibt mehrere Wege, das Hauptziel zu erreichen. Diese Wege werden durch verschiedene Zukunftsszenarien dargestellt. Mithilfe einiger Fragen können Sie das beste Zukunftsszenario und damit die optimale Lösung für die Region finden.</p>
+                <div className="w-[15rem] pt-8">
+                  <PrimaryButtonMedium
+                    href="/questionsDefault/challenges"
+                    text="Details sehen"
+                  />
+              </div>
               </div>      
             </div>
           </div>
