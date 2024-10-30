@@ -3,6 +3,7 @@
 import BottomNav from "../../../components/common/BottomNav";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import Goal from "../../../components/common/Goal";
+import Image from "next/image";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
 import Link from "next/link";
 import Switch from "../../../components/common/Switch";
@@ -372,54 +373,12 @@ export default function CreateScenario() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-end" style={{height: "fit-content"}}>
-              <div className="w-full max-w-4xl bg-white border rounded-lg shadow-md">
-                <div className="p-6 bg-gray-100 border-b">
-                  <h2 className="text-xl font-medium text-gray-700">Energieverbrauch 2040</h2>
-                  {/* Display the total energy production */}
-                  <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>
-                  <p className="text-lg text-gray-600">2023: <span className="italic text-indigo-700">126,68 GWh</span></p>
-                </div>
-                <div className="p-6 bg-gray-100 border-b">
-                  <h2 className="text-xl font-medium text-gray-700">Energieproduktion 2040</h2>
-                  {/* Display the total energy production */}
-                  <p className="text-3xl font-bold text-gray-900">{totalEnergyProduction.toFixed(1)} GWh</p>
-                  <p className="text-lg text-gray-600">2023: <span className="italic text-indigo-700">126,68 GWh</span></p>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-700">CO<sub>2</sub>-Reduzierung</h3>
-                  <div>
-                    <div className="text-end">82 %</div>
-                    <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-indigo-600 w-[82%] h-full"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-700 mb-4">Anteil pro Energieträger</h3>
-                  <div>
-                    <EnergyShare data={data} />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-700">Flächenanteil</h3>
-                  <div>
-                    <div className="text-end">12 %</div>
-                    <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-indigo-600 w-[12%] h-full"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-700">Autarkiegrad</h3>
-                  <div>
-                    <div className="text-end">100 %</div>
-                    <div className="relative bg-neutral-200 h-4 w-full">
-                      <div className="absolute bg-indigo-600 w-[100%] h-full"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <Image
+                src="/images/einstellungen_ergebnisse.svg"
+                width={376}
+                height={971}
+              />
             </div>
           </div>
         </LayoutSimple>
