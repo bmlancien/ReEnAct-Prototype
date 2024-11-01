@@ -65,14 +65,14 @@ function ScenarioComparison() {
           <Image
             src="/images/vergleich_middle.svg"
             width={1216}
-            height={354}
+            height={684}
           />
         </div>
         <div className="flex flex-row justify-center pt-16 pb-32">
           <Image
             src="/images/vergleich_bottom.svg"
             width={1216}
-            height={905}
+            height={466}
           />
         </div>
       </main>

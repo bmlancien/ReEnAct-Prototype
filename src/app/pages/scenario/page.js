@@ -8,6 +8,7 @@ import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/comm
 import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Scenario data here or import it from another file
 const scenarios = {
@@ -366,6 +367,13 @@ function ContentPage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="pt-16 pb-16">
+          <Image
+            src="/images/details_graphs.svg"
+            width={1216}
+            height={724}
+          />
         </div>
       </LayoutSimple>
       <BottomNav>

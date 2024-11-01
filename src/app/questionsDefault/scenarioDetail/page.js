@@ -5,6 +5,7 @@ import Link from "next/link";
 import { LightButtonMedium, PrimaryButtonMedium } from "../../../components/common/Buttons";
 import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { LinkIconBlue } from "../../../components/common/Links";
+import Image from "next/image";
 
 export default function ScenarioDetail() {
   return (
@@ -137,6 +138,13 @@ export default function ScenarioDetail() {
               </div>
             </div>
           </div>
+          <div className="pt-16 pb-16">
+            <Image
+              src="/images/details_graphs.svg"
+              width={1216}
+              height={724}
+            />
+        </div>
         </LayoutSimple>
       </main>
       <BottomNav>
