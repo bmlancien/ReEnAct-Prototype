@@ -331,9 +331,7 @@ function ContentPage() {
             <div key={index} className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
                 <h3 className="text-lg font-medium flex-grow">{stat.name}</h3>
-                <p className="text-3xl font-bold">
-                  <span className="italic text-indigo-700">{stat.value}</span>
-                </p>
+                <p className="text-3xl font-bold">{stat.value}</p>
                 <p className="text-sm">{stat.change}</p>
               </div>
             </div>
