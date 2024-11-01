@@ -1,6 +1,88 @@
-"use client";
+import Image from "next/image";
+import LayoutSimple from "../../../components/layout/LayoutSimple";
+import Link from "next/link";
+import { ArrowLeftIcon, ArrowUpRightIcon, ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
-import Header from "../../../components/common/Header";
+function ScenarioComparison() {
+  return (
+    <>
+      <nav className="flex items-center justify-center px-6 py-2 border border-b-slate-200">
+        <div className="flex relative w-full max-w-7xl px-2 sm:px-6 lg:px-8">
+          <span className="text-sky-800 font-semibold">
+            <Link
+              href="/"
+            >
+              Startseite
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="text-sky-800 font-semibold">
+            <Link
+              href="/questionsDefault/challenges"
+            >
+              Herausforderungen und Chancen
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="text-sky-800 font-semibold">
+            <Link
+              href="/questionsDefault/regionToday"
+            >
+              Region heute
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="text-sky-800 font-semibold">
+            <Link
+              href="/questionsDefault/scenariosOverview"
+            >
+              Szenarienübersicht
+            </Link>
+          </span>
+          <ChevronRightIcon
+            className="w-6 h-6 ms-2"
+          />
+          <span className="">
+            Szenarienvergleich
+          </span>
+        </div>
+      </nav>
+      <main>
+        <div className="flex flex-row justify-center pt-16 pb-16">
+          <Image
+            src="/images/vergleich_top.svg"
+            width={1216}
+            height={308}
+          />
+        </div>
+        <div className="flex flex-row justify-center pt-16 pb-16 bg-gray-50">
+          <Image
+            src="/images/vergleich_middle.svg"
+            width={1216}
+            height={354}
+          />
+        </div>
+        <div className="flex flex-row justify-center pt-16 pb-32">
+          <Image
+            src="/images/vergleich_bottom.svg"
+            width={1216}
+            height={905}
+          />
+        </div>
+      </main>
+    </>
+  );
+}
+
+export default ScenarioComparison;
+
+/* import Header from "../../../components/common/Header";
 import LayoutSimple from "../../../components/layout/LayoutSimple";
 import { LinkIconBlue } from "../../../components/common/Links";
 import { useState } from 'react';
@@ -381,3 +463,4 @@ const ScenarioComparison = () => {
 }
 
 export default ScenarioComparison;
+ */
