@@ -15,8 +15,8 @@ const scenarios = {
   1: {
     title: "Wind-Repowering",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "234 GWh", change: "+8,3%" },
-      { name: "Anteil Flächennutzung", value: "8,8%", change: "+150%" },
+      { name: "Eigenversorgung", value: "234 GWh", change: "+8,3%" },
+      { name: "Flächennutzung", value: "11,2 km<sup>2</sup>", change: "+150%" },
       { name: "Windkraft", value: "100 GWh", change: "+200%" },
       { name: "Photovoltaik", value: "111 GWh", change: "+200%" },
       { name: "Biomasse", value: "3,0 GWh", change: "+50%" },
@@ -40,8 +40,8 @@ const scenarios = {
   2: {
     title: "Zubau Wind und PV",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "300 GWh", change: "+25%" },
-      { name: "Anteil Flächennutzung", value: "12%", change: "+180%" },
+      { name: "Eigenversorgung", value: "300 GWh", change: "+25%" },
+      { name: "Flächennutzung", value: "12,2 km<sup>2</sup>", change: "+180%" },
       { name: "Windkraft", value: "180 GWh", change: "+220%" },
       { name: "Photovoltaik", value: "120 GWh", change: "+210%" },
       { name: "Biomasse", value: "2,5 GWh", change: "+30%" },
@@ -65,8 +65,8 @@ const scenarios = {
   3: {
     title: "Zubau PV",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "220 GWh", change: "+15%" },
-      { name: "Anteil Flächennutzung", value: "14%", change: "+200%" },
+      { name: "Eigenversorgung", value: "220 GWh", change: "+15%" },
+      { name: "Flächennutzung", value: "4,2 km<sup>2</sup>", change: "+200%" },
       { name: "Windkraft", value: "80 GWh", change: "+150%" },
       { name: "Photovoltaik", value: "140 GWh", change: "+250%" },
       { name: "Biomasse", value: "1,8 GWh", change: "+10%" },
@@ -90,8 +90,8 @@ const scenarios = {
   4: {
     title: "Moorbewirtschaftung",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "150 GWh", change: "+5%" },
-      { name: "Anteil Flächennutzung", value: "6%", change: "+50%" },
+      { name: "Eigenversorgung", value: "150 GWh", change: "+5%" },
+      { name: "Flächennutzung", value: "3,4 km<sup>2</sup>", change: "+50%" },
       { name: "Windkraft", value: "60 GWh", change: "+100%" },
       { name: "Photovoltaik", value: "70 GWh", change: "+120%" },
       { name: "Biomasse", value: "20 GWh", change: "+200%" },
@@ -115,8 +115,8 @@ const scenarios = {
   5: {
     title: "Wasserstoff",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "180 GWh", change: "+10%" },
-      { name: "Anteil Flächennutzung", value: "7%", change: "+70%" },
+      { name: "Eigenversorgung", value: "180 GWh", change: "+10%" },
+      { name: "Flächennutzung", value: "8,9 km<sup>2</sup>", change: "+70%" },
       { name: "Windkraft", value: "100 GWh", change: "+150%" },
       { name: "Photovoltaik", value: "60 GWh", change: "+100%" },
       { name: "Biomasse", value: "15 GWh", change: "+80%" },
@@ -140,8 +140,8 @@ const scenarios = {
   6: {
     title: "Kostenoptimierung",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "210 GWh", change: "+12%" },
-      { name: "Anteil Flächennutzung", value: "9%", change: "+100%" },
+      { name: "Eigenversorgung", value: "210 GWh", change: "+12%" },
+      { name: "Flächennutzung", value: "15,3 km<sup>2</sup>", change: "+100%" },
       { name: "Windkraft", value: "110 GWh", change: "+170%" },
       { name: "Photovoltaik", value: "90 GWh", change: "+180%" },
       { name: "Biomasse", value: "7,5 GWh", change: "+40%" },
@@ -165,8 +165,8 @@ const scenarios = {
   7: {
     title: "Hohe CO2-Preise",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "250 GWh", change: "+18%" },
-      { name: "Anteil Flächennutzung", value: "10%", change: "+120%" },
+      { name: "Eigenversorgung", value: "250 GWh", change: "+18%" },
+      { name: "Flächennutzung", value: "12,2 km<sup>2</sup>", change: "+120%" },
       { name: "Windkraft", value: "120 GWh", change: "+180%" },
       { name: "Photovoltaik", value: "100 GWh", change: "+190%" },
       { name: "Biomasse", value: "5,0 GWh", change: "+70%" },
@@ -190,8 +190,8 @@ const scenarios = {
   8: {
     title: "Suffizienz",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "180 GWh", change: "+10%" },
-      { name: "Anteil Flächennutzung", value: "5%", change: "+50%" },
+      { name: "Eigenversorgung", value: "180 GWh", change: "+10%" },
+      { name: "Flächennutzung", value: "10,9 km<sup>2</sup>", change: "+50%" },
       { name: "Windkraft", value: "90 GWh", change: "+130%" },
       { name: "Photovoltaik", value: "70 GWh", change: "+100%" },
       { name: "Biomasse", value: "10 GWh", change: "+60%" },
@@ -215,8 +215,8 @@ const scenarios = {
   9: {
     title: "Autarkie",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "220 GWh", change: "+20%" },
-      { name: "Anteil Flächennutzung", value: "11%", change: "+140%" },
+      { name: "Eigenversorgung", value: "220 GWh", change: "+20%" },
+      { name: "Flächennutzung", value: "8,4 km<sup>2</sup>", change: "+140%" },
       { name: "Windkraft", value: "110 GWh", change: "+160%" },
       { name: "Photovoltaik", value: "90 GWh", change: "+190%" },
       { name: "Biomasse", value: "7,0 GWh", change: "+40%" },
@@ -240,8 +240,8 @@ const scenarios = {
   10: {
     title: "Weiter wie bisher",
     stats: [
-      { name: "Gesamtenergie-produktion", value: "160 GWh", change: "+5%" },
-      { name: "Anteil Flächennutzung", value: "4%", change: "+30%" },
+      { name: "Eigenversorgung", value: "160 GWh", change: "+5%" },
+      { name: "Flächennutzung", value: "9,3 km<sup>2</sup>", change: "+30%" },
       { name: "Windkraft", value: "70 GWh", change: "+100%" },
       { name: "Photovoltaik", value: "60 GWh", change: "+110%" },
       { name: "Biomasse", value: "5,5 GWh", change: "+20%" },
@@ -322,16 +322,16 @@ function ContentPage() {
         </div>
       </nav>
       <LayoutSimple>
-        <div className="relative flex justify-center pb-8">
-          <h1 className="text-xl font-semibold pe-4">{scenario.title}</h1>
+        <div className="relative flex pb-8">
+          <h1 className="text-2xl font-semibold pe-4">{scenario.title}<span className="text-base font-normal ms-4">(Jährliche Übersicht)</span></h1>
         </div>
 
-        <div className="flex flex-wrap -mx-2 mb-10">
+        {/* <div className="flex flex-wrap -mx-2 mb-10">
           {scenario.stats.map((stat, index) => (
             <div key={index} className="w-full md:w-1/6 px-2 mb-4 md:mb-0 flex">
               <div className="bg-white p-6 border rounded-lg shadow flex flex-col w-full">
-                <h3 className="text-lg font-medium flex-grow">{stat.name}</h3>
-                <p className="text-3xl font-bold">{stat.value}</p>
+                <h3 className="text-base flex-grow">{stat.name}</h3>
+                <p className="text-3xl font-bold pt-4" dangerouslySetInnerHTML={{ __html: stat.value }} />
                 <p className="text-sm">{stat.change}</p>
               </div>
             </div>
@@ -365,12 +365,12 @@ function ContentPage() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="pt-16 pb-16">
+        </div> */}
+        <div className="pb-16">
           <Image
-            src="/images/details_graphs.svg"
+            src="/images/scenario_details.svg"
             width={1216}
-            height={724}
+            height={1229}
           />
         </div>
       </LayoutSimple>
