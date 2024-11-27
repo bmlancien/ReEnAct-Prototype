@@ -87,8 +87,17 @@ export default function CreateScenario() {
           </span>
         </div>
       </nav>
-      <main className="grow bg-neutral-50">
-        <LayoutSimple>
+      <main className="grow bg-gray-50">
+        <div
+          className="flex flex-col justify-center items-center pb-48"
+        >
+          <Image
+            src="/images/creation.svg"
+            width={1367}
+            height={1209}
+          />
+        </div>
+        {/* <LayoutSimple>
           <div className="flex justify-between pb-8">
             <span>Bitte nutzen Sie die Einstellungen und Schieberegler, um Ihr zukünftiges Szenario zu erstellen.</span>
             <Goal />
@@ -381,7 +390,7 @@ export default function CreateScenario() {
               />
             </div>
           </div>
-        </LayoutSimple>
+        </LayoutSimple> */}
       </main>
       <BottomNav>
         <div className="flex">

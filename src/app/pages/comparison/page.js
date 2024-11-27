@@ -54,45 +54,43 @@ function ScenarioComparison() {
           </span>
         </div>
       </nav>
-      <main>
-      <div className="flex flex-row justify-center pt-16 pb-16">
-        <Tabs defaultValue="gesamtvergleich">
-          <div className="flex justify-center">
-            <TabsList className="rounded-full p-0 h-auto">
-              <TabsTrigger
-                value="gesamtvergleich"
-                className="text-base data-[state=active]:bg-slate-800 data-[state=active]:text-white rounded-l-full">
-                  Gesamtvergleich
-                </TabsTrigger>
+      <main className="bg-gray-50">
+        <div className="flex flex-row justify-center pt-16 pb-16">
+          <Tabs defaultValue="gesamtvergleich">
+            <div className="flex justify-center">
+              <TabsList className="rounded-full p-0 h-auto">
                 <TabsTrigger
-                  value="einzelauswahl"
-                  className="text-base data-[state=active]:bg-slate-800 data-[state=active]:text-white rounded-r-full">
-                    Einzelauswahl
-                </TabsTrigger>
-            </TabsList>
-          </div>
-          <TabsContent value="gesamtvergleich">
-            <div className="flex flex-row justify-center pt-16 pb-16">
-              <Image
-                src="/images/general_comparison.svg"
-                width={1216}
-                height={919}
-              />
+                  value="gesamtvergleich"
+                  className="text-base bg-white text-slate-800 data-[state=active]:bg-slate-800 data-[state=active]:text-white rounded-l-full">
+                    Gesamtvergleich
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="einzelauswahl"
+                    className="text-base bg-white text-slate-800 data-[state=active]:bg-slate-800 data-[state=active]:text-white rounded-r-full">
+                      Einzelauswahl
+                  </TabsTrigger>
+              </TabsList>
             </div>
-          </TabsContent>
-          <TabsContent value="einzelauswahl">
-            <div className="flex flex-row justify-center pt-16 pb-16">
-              <Image
-                src="/images/detailed_comparison.svg"
-                width={1216}
-                height={1178}
-              />
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-        
-        
+            <TabsContent value="gesamtvergleich">
+              <div className="flex flex-row justify-center pt-16 pb-16">
+                <Image
+                  src="/images/comparison_1.svg"
+                  width={1367}
+                  height={1167}
+                />
+              </div>
+            </TabsContent>
+            <TabsContent value="einzelauswahl">
+              <div className="flex flex-row justify-center pt-16 pb-16">
+                <Image
+                  src="/images/comparison_2.svg"
+                  width={1367}
+                  height={1326}
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
       </main>
     </>
   );

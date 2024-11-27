@@ -58,7 +58,16 @@ export default function ScenarioDetail() {
         </div>
       </nav>
       <main className="grow">
-        <LayoutSimple>
+        <div
+            className="flex flex-col justify-center items-center pb-48"
+          >
+          <Image
+            src="/images/my-scenario.svg"
+            width={1367}
+            height={1657}
+          />
+        </div>
+        {/* <LayoutSimple>
           <div className="relative flex justify-center pb-8">
             <h1 className="text-xl font-semibold pe-4">Mein Zukunftszenario</h1>
           </div>
@@ -145,7 +154,7 @@ export default function ScenarioDetail() {
               height={724}
             />
         </div>
-        </LayoutSimple>
+        </LayoutSimple> */}
       </main>
       <BottomNav>
         <div className="flex">

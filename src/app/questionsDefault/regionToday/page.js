@@ -39,12 +39,12 @@ export default function RegionToday() {
         </div>
       </nav>
       <div
-        className="flex flex-col justify-center items-center pt-16 pb-48"
+        className="flex flex-col justify-center items-center pb-48"
       >
         <Image
-          src="/images/region_heute_page.svg"
-          width={1026}
-          height={1587}
+          src="/images/region.svg"
+          width={1367}
+          height={1772}
         />
       </div>
       <BottomNav>

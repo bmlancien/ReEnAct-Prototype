@@ -368,9 +368,9 @@ function ContentPage() {
         </div> */}
         <div className="pb-16">
           <Image
-            src="/images/scenario_details.svg"
-            width={1216}
-            height={1229}
+            src="/images/overview.svg"
+            width={1367}
+            height={1525}
           />
         </div>
       </LayoutSimple>
